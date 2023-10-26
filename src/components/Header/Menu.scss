@@ -1,0 +1,23 @@
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 369px;
+  max-height: 18px;
+}
+
+.menu a {
+  font-family: "PT Serif", serif;
+  color: #171717;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  padding-left: 16.25px;
+  padding-right: 16.25px;
+}
+
+.menu a:hover {
+  color: #c9a96e;
+}

@@ -1,7 +1,15 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header/Header";
 
-function App() {
-  return <h1>placeholder</h1>;
-}
+const App: React.FC = () => {
+  return (
+    <div className="app">
+      <Header />
+      {/* <Main />
+      <Footer /> */}
+    </div>
+  );
+};
 
 export default App;
