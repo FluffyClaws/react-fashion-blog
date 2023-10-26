@@ -1,8 +1,7 @@
-// Header.tsx
 import React from "react";
-import Logo from "./Logo";
 import Menu from "./Menu";
 import "./Header.scss";
+import Logo from "./Logo";
 
 const Header: React.FC = () => {
   return (
