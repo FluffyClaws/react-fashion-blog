@@ -1,0 +1,26 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+
+  a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    font-family: "PT Serif";
+    font-size: 14px;
+    line-height: 19px;
+    color: #666666;
+    padding: 14px 0 15px;
+    border-bottom: 1px solid #e5e5e5;
+
+    &:last-child {
+      border: none;
+      margin-bottom: 70px;
+    }
+  }
+
+  span {
+    display: flex;
+  }
+}

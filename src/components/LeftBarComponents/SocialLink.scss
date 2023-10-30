@@ -1,0 +1,48 @@
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 20px;
+
+  a {
+    text-decoration: none;
+  }
+
+  &:nth-child(-n + 9) {
+    margin-bottom: 70px;
+  }
+}
+
+.social {
+  width: 88px;
+  height: 88px;
+  background-color: #f8f9fa;
+  background-repeat: no-repeat;
+  background-position: center top 25%;
+
+  &.fb {
+    background-image: url("../../../public/images/fb.png");
+  }
+
+  &.pinterest {
+    background-image: url("../../../public/images/pinterest.png");
+  }
+
+  // ... [Continue for other social icons]
+}
+
+.social-info {
+  font-family: "PT Sans";
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 43px;
+
+  span {
+    display: flex;
+  }
+}
