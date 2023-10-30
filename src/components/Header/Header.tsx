@@ -1,22 +1,23 @@
 import React from "react";
 import Menu from "./Menu";
-import "./Header.scss";
 import Logo from "./Logo";
+import { Container, Grid } from "@mui/material";
+import "./Header.scss";
 
 const Header: React.FC = () => {
   return (
-    <header className="header">
-      <div className="header-container">
-        <div className="row">
-          <div className="col-6">
+    <Grid container className="header" alignItems="center">
+      <Container className="header-container">
+        <Grid container className="row" spacing={3}>
+          <Grid item xs={6}>
             <Logo />
-          </div>
-          <div className="col-6">
+          </Grid>
+          <Grid item xs={6} container justifyContent="flex-end">
             <Menu />
-          </div>
-        </div>
-      </div>
-    </header>
+          </Grid>
+        </Grid>
+      </Container>
+    </Grid>
   );
 };
 
