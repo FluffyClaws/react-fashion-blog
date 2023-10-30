@@ -1,0 +1,58 @@
+.bottom-social-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.bottom-social {
+  display: flex;
+  width: 304px;
+  justify-content: space-evenly;
+}
+
+.social-circle {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center top 50%;
+}
+
+.social-circle:hover {
+  background-color: #c9a96e;
+}
+
+.twitter-white {
+  background-image: url("../../..//public/images/twitter.png");
+  background-position: center top 50%;
+  background-repeat: no-repeat;
+}
+
+.twitter-white:hover {
+  background-image: url("../../..//public/images/twitter-white.png");
+  background-position: center top 50%;
+  background-repeat: no-repeat;
+}
+
+.gplus-circle {
+  background: url("../../..//public/images/google.png") 7.22px no-repeat,
+    url("../../..//public/images/plus.png") 21.15px no-repeat;
+}
+
+.instagram-circle {
+  background: url("../../..//public/images/instagram.png") center no-repeat,
+    url("../../..//public/images/instagram1.png") center no-repeat;
+}
+
+.be {
+  background-image: url("../../..//public/images/be.png");
+}
+
+.pinterest {
+  background-image: url("../../..//public/images/pinterest.png");
+}
+
+.fb {
+  background-image: url("../../..//public/images/fb.png");
+}
