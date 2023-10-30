@@ -18,29 +18,12 @@
   overflow: hidden;
 
   .instagram-image img {
-    width: 100%;
+    width: 296px;
+    height: 296px;
     outline: none;
 
     &:focus {
       outline: none;
-    }
-  }
-
-  .insta-photos {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-
-    .slick-list,
-    .slick-track {
-      overflow: hidden;
-    }
-
-    .instagram-image {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
   }
 }
