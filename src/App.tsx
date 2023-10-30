@@ -2,13 +2,14 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
+import Footer from "./components/Footer/Footer";
 
 const App: React.FC = () => {
   return (
     <div className="app">
       <Header />
       <Main />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
