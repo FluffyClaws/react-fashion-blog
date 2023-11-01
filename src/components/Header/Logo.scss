@@ -1,0 +1,25 @@
+.logo {
+  position: absolute;
+  top: 34px;
+  left: 80px;
+  height: 32px;
+}
+
+.logo a {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+  width: 126px;
+  letter-spacing: 2.5px;
+  color: #171717;
+}
+
+.rectangle {
+  width: 125px;
+  height: 6px;
+  top: 22px;
+  opacity: 0.35;
+  background-color: #c9a96e;
+  position: inherit;
+}
