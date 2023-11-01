@@ -6,7 +6,6 @@ import LeftBar from "./LeftBar";
 import InstagramSection from "./InstagramSection";
 import BottomMenu from "./BottomMenu";
 import BottomSocial from "./BottomSocial";
-import "./Main.scss";
 
 const Main: React.FC = () => {
   return (

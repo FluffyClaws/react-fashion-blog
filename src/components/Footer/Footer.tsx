@@ -1,17 +1,20 @@
 import React from "react";
+import { Box, Typography } from "@mui/material";
 import "./Footer.scss";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer">
-      <div className="foot-wrapper">
-        <div className="foot-container">
-          &copy; {currentYear} Logwork. All Right Reserved.
-        </div>
-      </div>
-    </footer>
+    <Box component="footer" className="footer">
+      <Box className="foot-wrapper">
+        <Box className="foot-container">
+          <Typography variant="body1">
+            &copy; {currentYear} Logwork. All Right Reserved.
+          </Typography>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

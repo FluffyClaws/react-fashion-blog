@@ -19,7 +19,8 @@
 .rectangle {
   width: 125px;
   height: 6px;
-  top: 22px;
   opacity: 0.35;
   background-color: #c9a96e;
+  position: relative;
+  margin-top: -10px;
 }

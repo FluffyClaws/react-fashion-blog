@@ -1,0 +1,71 @@
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 20px;
+
+  a {
+    text-decoration: none;
+  }
+
+  &:nth-child(-n + 9) {
+    margin-bottom: 70px;
+  }
+}
+
+.social {
+  width: 88px;
+  height: 88px;
+  background-color: #f8f9fa;
+  background-repeat: no-repeat;
+  background-position: center top 25%;
+
+  &.fb {
+    background-image: url("../../../public/images/fb.png");
+  }
+
+  &.pinterest {
+    background-image: url("../../../public/images/pinterest.png");
+  }
+  &.vine {
+    background-image: url("../../../public/images/vine.png");
+  }
+  &.ball {
+    background-image: url("../../../public/images/ball.png");
+  }
+  &.twitter {
+    background-image: url("../../../public/images/twitter.png");
+  }
+  &.instagram {
+    background: url("../../../public/images/instagram.png") center top 25%
+        no-repeat,
+      url("../../../public/images/instagram1.png") top 21.5px left 39px
+        no-repeat;
+    background-color: #f8f9fa;
+  }
+  &.youtube {
+    background-image: url("../../../public/images/yt.png");
+  }
+  &.gplus {
+    background: url("../../../public/images/google.png") left 33px top 25%
+        no-repeat,
+      url("../../../public/images/plus.png") top 28% right 33px no-repeat;
+    background-color: #f8f9fa;
+  }
+}
+
+.social-info {
+  font-family: "PT Sans";
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 43px;
+
+  span {
+    display: flex;
+  }
+}

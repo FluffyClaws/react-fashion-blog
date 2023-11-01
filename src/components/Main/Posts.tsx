@@ -1,6 +1,7 @@
 import React from "react";
-import "./Posts.scss";
+import { Box, Typography, Link, Paper } from "@mui/material";
 import { posts } from "../../utils/postData";
+import "./Posts.scss";
 
 interface PostProps {
   imageUrl: string;
@@ -20,35 +21,31 @@ const FeaturedPost: React.FC<PostProps> = ({
   date,
   content,
 }) => (
-  <div className="shadow">
-    <div
+  <Paper elevation={3} className="shadow feat-post">
+    <Box
       className="feat-post-main-image"
       style={{ backgroundImage: `url(${imageUrl})` }}
-    ></div>
-    <div className="feat-post-info">
-      <div className="feat-main-wrapper">
-        <div className="post-cat">
-          <a href="#">{category}</a>
-        </div>
-        <div className="feat-main-head">
-          <a href="#">{headline}</a>
-        </div>
-        <div className="feat-main-addinfo-wrapper">
-          <div className="post-addinfo">
-            <a href="#">{date}</a>
-            <a href="#">
-              <span className="by-post">By </span>
-              {author}
-            </a>
-            <a href="#" className="">
-              4 comments
-            </a>
-          </div>
-        </div>
-        <div className="feat-post-main-cont">{content}</div>
-      </div>
-    </div>
-  </div>
+    ></Box>
+    <Box className="feat-post-info">
+      <Box className="feat-main-wrapper">
+        <Typography className="post-cat">{category}</Typography>
+
+        <Typography className="feat-main-head" component={Link} href="#">
+          {headline}
+        </Typography>
+        <Box className="feat-main-addinfo-wrapper">
+          <Typography>{date}</Typography>
+          <Typography component={Link} href="#">
+            {author}
+          </Typography>
+          <Typography component={Link} href="#">
+            4 comments
+          </Typography>
+        </Box>
+        <Typography className="feat-post-main-cont">{content}</Typography>
+      </Box>
+    </Box>
+  </Paper>
 );
 
 const Post: React.FC<PostProps> = ({
@@ -58,30 +55,28 @@ const Post: React.FC<PostProps> = ({
   author,
   date,
 }) => (
-  <div className="shadow">
-    <div className="post">
-      <div
-        className="post-image"
-        style={{ backgroundImage: `url(${imageUrl})` }}
-      ></div>
-      <div className="post-info">
-        <div className="post-cat">{category}</div>
-        <div className="post-head">
-          <a href="#">{headline}</a>
-        </div>
-        <div className="addinfo-wrapper">
-          <div className="post-addinfo">
-            <a href="#">{author}</a>
-            <span>{date}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Paper elevation={3} className="shadow post">
+    <Box
+      className="post-image"
+      style={{ backgroundImage: `url(${imageUrl})` }}
+    ></Box>
+    <Box className="post-info">
+      <Typography className="post-cat">{category}</Typography>
+      <Typography className="post-head" component={Link} href="#">
+        {headline}
+      </Typography>
+      <Box className="addinfo-wrapper">
+        <Typography component={Link} href="#">
+          {author}
+        </Typography>
+        <Typography>{date}</Typography>
+      </Box>
+    </Box>
+  </Paper>
 );
 
 const Posts: React.FC = () => (
-  <div className="posts">
+  <Box className="posts-wrapper posts">
     {posts.map((post) =>
       post.featured ? (
         <FeaturedPost
@@ -104,7 +99,7 @@ const Posts: React.FC = () => (
         />
       )
     )}
-  </div>
+  </Box>
 );
 
 export default Posts;
