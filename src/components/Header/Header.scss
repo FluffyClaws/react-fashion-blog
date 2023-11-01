@@ -1,29 +1,17 @@
 .header {
   max-width: 1920px;
   height: 100px;
-  display: flex;
-  align-items: center;
   background-color: rgb(255, 255, 255);
 }
 
 .header-container {
   width: 95%;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0 -15px;
   max-width: 1915px;
-}
-
-.col-6 {
-  display: flex;
-  flex: 0 0 50%;
-  max-width: 50%;
-  justify-content: flex-end;
 }
 
 [class*="col-"] {
