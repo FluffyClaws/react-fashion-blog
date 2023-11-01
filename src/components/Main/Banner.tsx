@@ -1,35 +1,29 @@
 import React from "react";
+import { Box, Link } from "@mui/material";
 import "./Banner.scss";
 
 const Banner: React.FC = () => {
   return (
-    <div className="banner">
-      <div className="bigB">
-        <div className="gradient"></div>
-        <div className="container">
-          <div className="col-12">
-            <div className="bigB-text">
-              <a href="#" className="cat">
-                Vehicle
-              </a>
-              <a href="#" className="headline">
-                One of Saturn’s largest rings <br />
-                may be newer than anyone
-              </a>
-              <div className="bigB-wrapper">
-                <a href="#">June 6, 2019</a>
-                <a href="#">
-                  <span className="by">By </span>Rickie Baroch
-                </a>
-                <a href="#" className="">
-                  4 comments
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Box className="bigB">
+      <Box className="gradient"></Box>
+      <Box className="container">
+        <Box className="col-12">
+          <Box className="bigB-text">
+            <Link href="#" className="cat">
+              Vehicle
+            </Link>
+            <Link href="#" className="headline">
+              One of Saturn’s largest rings <br /> may be newer than anyone
+            </Link>
+            <Box className="bigB-wrapper">
+              <Link href="#">June 6, 2019</Link>
+              <Link href="#">Rickie Baroch</Link>
+              <Link href="#">4 comments</Link>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Box, Typography, Link } from "@mui/material";
 import "./SocialLink.scss";
 
 const SocialLink: React.FC<{
@@ -6,13 +7,18 @@ const SocialLink: React.FC<{
   count: number;
   label: string;
 }> = ({ className, count, label }) => (
-  <a href="">
-    <div className={`social ${className}`}>
-      <div className="social-info">
-        {count}
-        <span>{label}</span>
-      </div>
-    </div>
-  </a>
+  <Link href="" underline="none">
+    <Box
+      className={`social social-info ${className}`}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      pt={5}
+    >
+      <Typography variant="body2">{count}</Typography>
+      <Typography variant="body2">{label}</Typography>
+    </Box>
+  </Link>
 );
+
 export default SocialLink;

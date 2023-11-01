@@ -1,4 +1,5 @@
 import React from "react";
+import { Box, Typography, Link } from "@mui/material";
 import "./Tag.scss";
 
 const tagsList = [
@@ -17,14 +18,16 @@ const tagsList = [
 ];
 
 const Tag: React.FC = () => (
-  <div>
-    <div className="left-bar-blocks">Tags</div>
+  <Box className="tags-wrapper">
+    <Box className="left-bar-blocks">Tags</Box>
     {tagsList.map((tag) => (
-      <div key={tag} className="tags">
-        <a href="">{tag}</a>
-      </div>
+      <Box key={tag} className="tags">
+        <Link href="#" underline="none" className="tag-link">
+          <Typography variant="body2">{tag}</Typography>
+        </Link>
+      </Box>
     ))}
-  </div>
+  </Box>
 );
 
 export default Tag;

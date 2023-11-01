@@ -35,29 +35,18 @@
 
     .cat {
       font-size: 14px;
-      font-weight: 400;
-      line-height: 18px;
       text-transform: uppercase;
-      font-style: normal;
-      font-family: "PT Sans", sans-serif;
     }
 
     .headline {
       font-size: 40px;
       line-height: 50px;
       font-weight: 700;
-      font-family: "PT Serif", serif;
-      font-style: normal;
     }
 
     .bigB-wrapper {
       display: flex;
       flex-direction: row;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 19px;
-      font-family: "PT Serif", serif;
-      font-style: normal;
       gap: 15px;
     }
   }
@@ -65,9 +54,4 @@
 
 .by {
   color: #b4b4b4;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 19px;
-  font-family: "PT Serif", serif;
-  font-style: normal;
 }

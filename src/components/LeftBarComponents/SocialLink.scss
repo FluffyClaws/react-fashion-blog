@@ -27,8 +27,31 @@
   &.pinterest {
     background-image: url("../../../public/images/pinterest.png");
   }
-
-  // ... [Continue for other social icons]
+  &.vine {
+    background-image: url("../../../public/images/vine.png");
+  }
+  &.ball {
+    background-image: url("../../../public/images/ball.png");
+  }
+  &.twitter {
+    background-image: url("../../../public/images/twitter.png");
+  }
+  &.instagram {
+    background: url("../../../public/images/instagram.png") center top 25%
+        no-repeat,
+      url("../../../public/images/instagram1.png") top 21.5px left 39px
+        no-repeat;
+    background-color: #f8f9fa;
+  }
+  &.youtube {
+    background-image: url("../../../public/images/yt.png");
+  }
+  &.gplus {
+    background: url("../../../public/images/google.png") left 33px top 25%
+        no-repeat,
+      url("../../../public/images/plus.png") top 28% right 33px no-repeat;
+    background-color: #f8f9fa;
+  }
 }
 
 .social-info {

@@ -1,9 +1,12 @@
 import React from "react";
+import { Box, Typography, Link } from "@mui/material";
 import "./Categories.scss";
 
 const Categories: React.FC = () => (
-  <div className="categories">
-    <div className="left-bar-blocks">Categories</div>
+  <Box className="categories">
+    <Typography className="left-bar-blocks" pt={2}>
+      Categories
+    </Typography>
     {[
       "Fashion (23)",
       "Style & clothes (7)",
@@ -11,11 +14,11 @@ const Categories: React.FC = () => (
       "Black & White (5)",
       "Modern clothes (12)",
     ].map((category) => (
-      <a href="" key={category}>
+      <Link href="" key={category} underline="none">
         {category}
-      </a>
+      </Link>
     ))}
-  </div>
+  </Box>
 );
 
 export default Categories;

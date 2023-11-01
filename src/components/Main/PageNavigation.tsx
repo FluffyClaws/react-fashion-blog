@@ -1,38 +1,25 @@
-// PageNavigation.tsx
-
 import React from "react";
+import { Box, Link, Typography } from "@mui/material";
 import "./PageNavigation.scss";
 
 const PageNavigation: React.FC = () => {
   return (
-    <div className="page-nav-wrapper col-12">
-      <div className="page-nav-box">
-        <a href="#">
-          <div className="prev-page">OLDER POST</div>
-        </a>
-        <a href="#">
-          <div className="page-num">1</div>
-        </a>
-        <a href="#">
-          <div className="page-num">2</div>
-        </a>
-        <a href="#">
-          <div className="page-num">3</div>
-        </a>
-        <a href="#">
-          <div className="page-num">...</div>
-        </a>
-        <a href="#">
-          <div className="page-num last">8</div>
-        </a>
-        <a href="#">
-          <div className="next-page">
-            NEXT POST
-            <div className="arrow-next"></div>
-          </div>
-        </a>
-      </div>
-    </div>
+    <Box className="page-nav-wrapper">
+      <Box className="page-nav-box">
+        <Link href="#" underline="none" className="prev-page">
+          OLDER POST
+        </Link>
+        {[1, 2, 3, "...", 8].map((pageNum) => (
+          <Link href="#" key={pageNum} underline="none" className="page-num">
+            <Typography variant="body1">{pageNum}</Typography>
+          </Link>
+        ))}
+        <Link href="#" underline="none" className="next-page">
+          NEXT POST
+          <Box className="arrow-next" />
+        </Link>
+      </Box>
+    </Box>
   );
 };
 

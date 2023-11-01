@@ -1,34 +1,39 @@
-.tags-wrapper,
-.top-tags-wrapper {
+.tags-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   max-width: 270px;
   margin-top: 20px;
 
-  &.top-tags-wrapper {
-    margin-top: 20px;
-  }
-}
-
-.tags,
-.tags a {
-  height: 30px;
-  background-color: #f8f9fa;
-  font-family: "PT Serif";
-  font-size: 14px;
-  line-height: 19px;
-  color: #666666;
-
-  &.tags {
+  .tags {
+    flex: 1 0 calc(33.3333% - 10px);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 4;
-  }
+    height: 30px;
+    background-color: #f8f9fa;
+    padding: 0 10px;
 
-  &.tags a {
-    display: flex;
-    align-items: center;
+    .tag-link {
+      font-family: "PT Serif";
+      font-size: 14px;
+      line-height: 19px;
+      color: #666666;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+
+      p {
+        padding-top: 5px;
+        text-align: center;
+        height: 30px;
+        background-color: #f8f9fa;
+        font-family: "PT Serif";
+        font-size: 14px;
+        color: #666666;
+      }
+    }
   }
 }

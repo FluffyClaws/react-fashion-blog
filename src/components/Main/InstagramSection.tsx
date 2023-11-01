@@ -1,9 +1,10 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
+import { Typography, Link, Box } from "@mui/material";
 import "react-multi-carousel/lib/styles.css";
 import "./InstagramSection.scss";
 
-const InstagramSection = () => {
+const InstagramSection: React.FC = () => {
   const images = Array(6)
     .fill(0)
     .map((_, index) => `/images/photo${index + 1}.png`);
@@ -28,10 +29,10 @@ const InstagramSection = () => {
   };
 
   return (
-    <div className="instagram-section">
-      <div className="insta-main">
-        Follow our <a href="#">@instagram_name</a>
-      </div>
+    <Box className="instagram-section">
+      <Typography className="insta-main">
+        Follow our <Link href="#">@instagram_name</Link>
+      </Typography>
       <Carousel
         responsive={responsive}
         infinite={true}
@@ -43,12 +44,12 @@ const InstagramSection = () => {
         focusOnSelect={true}
       >
         {images.map((image, index) => (
-          <div key={index} className="instagram-image">
+          <Box key={index} className="instagram-image">
             <img src={image} alt={`Instagram Image ${index + 1}`} />
-          </div>
+          </Box>
         ))}
       </Carousel>
-    </div>
+    </Box>
   );
 };
 

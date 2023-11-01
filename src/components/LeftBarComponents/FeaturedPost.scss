@@ -16,18 +16,21 @@
     }
   }
 }
+
 .post {
   &-cat {
-    padding: 15px 0 4px;
+    padding: 10px 0 4px;
     text-align: center;
-    font-family: "PT Sans";
-    font-size: 12px;
-    line-height: 16px;
+
     text-transform: uppercase;
 
     a {
       text-decoration: none;
       color: #c9a96e;
+      font-family: "PT Sans";
+      font-style: normal;
+      font-weight: 400px;
+      font-size: 12px;
     }
   }
 
@@ -38,6 +41,7 @@
       line-height: 16px;
       padding: 5px 10px 14px 0;
       color: #666666;
+      text-decoration: none;
     }
   }
 }
