@@ -18,9 +18,6 @@ const Menu: React.FC = () => {
       <Typography component={Link} to="/contact" variant="body1">
         Contact
       </Typography>
-      <Typography component={Link} to="/purchase" variant="body1">
-        Purchase
-      </Typography>
     </Box>
   );
 };

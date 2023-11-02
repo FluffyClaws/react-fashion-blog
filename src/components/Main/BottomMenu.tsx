@@ -26,9 +26,6 @@ const BottomMenu: React.FC = () => {
           <Link to="/contact" className="menu-item">
             Contact
           </Link>
-          <Link to="/purchase" className="menu-item">
-            Purchase
-          </Link>
         </Box>
       </Box>
     </Box>

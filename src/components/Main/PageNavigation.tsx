@@ -7,7 +7,7 @@ const PageNavigation: React.FC = () => {
     <Box className="page-nav-wrapper">
       <Box className="page-nav-box">
         <Link href="#" underline="none" className="prev-page">
-          OLDER POST
+          PREV PAGE
         </Link>
         {[1, 2, 3, "...", 8].map((pageNum) => (
           <Link href="#" key={pageNum} underline="none" className="page-num">
@@ -15,7 +15,7 @@ const PageNavigation: React.FC = () => {
           </Link>
         ))}
         <Link href="#" underline="none" className="next-page">
-          NEXT POST
+          NEXT PAGE
           <Box className="arrow-next" />
         </Link>
       </Box>
