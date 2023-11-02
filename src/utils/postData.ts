@@ -58,7 +58,7 @@ export const posts: Post[] = [
     date: "November 1, 2023",
     featured: true,
     content:
-      "Experience the magic of the aurora borealis in a breathtaking Arctic expedition.",
+      "Venite ad explorare loca mirabilia quae natura et historia nobis praebent, ab antiquis ruinis ad litora pristina, ubi cultura et aventura manu in manu ambulant, omnia vos invitant ad experientiam inolvidabilem, omnia vos invitant ad experientiam inolvidabilem.",
   },
   {
     id: 8,

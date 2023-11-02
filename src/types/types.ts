@@ -24,3 +24,8 @@ export type LeftBarProps = {
   showSocialLinks?: boolean;
   showTags?: boolean;
 };
+export type PageNavigationProps = {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+};

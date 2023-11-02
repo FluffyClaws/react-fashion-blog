@@ -4,7 +4,6 @@ import { Recipe } from "../../types/types";
 import "./RecipePost.scss";
 
 const RecipePost: React.FC<Recipe> = ({
-  id,
   category,
   title,
   author,

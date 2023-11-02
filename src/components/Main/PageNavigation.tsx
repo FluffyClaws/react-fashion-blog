@@ -1,12 +1,7 @@
 import React from "react";
 import { Box, Button } from "@mui/material";
 import "./PageNavigation.scss";
-
-type PageNavigationProps = {
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
-};
+import { PageNavigationProps } from "../../types/types";
 
 const PageNavigation: React.FC<PageNavigationProps> = ({
   currentPage,
@@ -27,7 +22,6 @@ const PageNavigation: React.FC<PageNavigationProps> = ({
         <Button onClick={handlePrevPage} disabled={currentPage === 1}>
           PREV PAGE
         </Button>
-        {/* Render page numbers here */}
         <Button onClick={handleNextPage} disabled={currentPage === totalPages}>
           NEXT PAGE
         </Button>
