@@ -6,26 +6,27 @@ import LeftBar from "./LeftBar";
 import InstagramSection from "./InstagramSection";
 import BottomMenu from "./BottomMenu";
 import BottomSocial from "./BottomSocial";
+import { Grid, Container, Box } from "@mui/material";
 
 const Main: React.FC = () => {
   return (
-    <main className="main">
+    <Box component="main">
       <Banner />
-      <div className="container">
-        <div className="row">
-          <div className="col-9">
+      <Container maxWidth="lg">
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={9}>
             <Posts />
             <PageNavigation />
-          </div>
-          <div className="col-3">
+          </Grid>
+          <Grid item xs={12} md={3}>
             <LeftBar />
-          </div>
-        </div>
-      </div>
+          </Grid>
+        </Grid>
+      </Container>
       <InstagramSection />
       <BottomMenu />
       <BottomSocial />
-    </main>
+    </Box>
   );
 };
 

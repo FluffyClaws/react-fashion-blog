@@ -1,13 +1,4 @@
-export type Post = {
-  id: number;
-  imageUrl: string;
-  category: string;
-  title: string;
-  author: string;
-  date: string;
-  featured?: boolean;
-  content?: string;
-};
+import { Post } from "../types/postTypes";
 
 export const posts: Post[] = [
   {

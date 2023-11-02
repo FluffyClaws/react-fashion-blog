@@ -1,27 +1,19 @@
 import React from "react";
 import { Box, Typography, Link, Paper } from "@mui/material";
+import { Post as PostType } from "../../types/postTypes";
 import { posts } from "../../utils/postData";
 import "./Posts.scss";
 
-interface PostProps {
-  imageUrl: string;
-  category: string;
-  headline: string;
-  author: string;
-  date: string;
-  featured?: boolean;
-  content?: string;
-}
-
-const FeaturedPost: React.FC<PostProps> = ({
+const FeaturedPost: React.FC<PostType> = ({
   imageUrl,
   category,
-  headline,
+  title,
   author,
   date,
   content,
+  featured,
 }) => (
-  <Paper elevation={3} className="shadow feat-post">
+  <Paper elevation={3} className={`shadow ${featured ? "feat-post" : ""}`}>
     <Box
       className="feat-post-main-image"
       style={{ backgroundImage: `url(${imageUrl})` }}
@@ -29,9 +21,8 @@ const FeaturedPost: React.FC<PostProps> = ({
     <Box className="feat-post-info">
       <Box className="feat-main-wrapper">
         <Typography className="post-cat">{category}</Typography>
-
         <Typography className="feat-main-head" component={Link} href="#">
-          {headline}
+          {title}
         </Typography>
         <Box className="feat-main-addinfo-wrapper">
           <Typography>{date}</Typography>
@@ -42,20 +33,23 @@ const FeaturedPost: React.FC<PostProps> = ({
             4 comments
           </Typography>
         </Box>
-        <Typography className="feat-post-main-cont">{content}</Typography>
+        {content && (
+          <Typography className="feat-post-main-cont">{content}</Typography>
+        )}
       </Box>
     </Box>
   </Paper>
 );
 
-const Post: React.FC<PostProps> = ({
+const Post: React.FC<PostType> = ({
   imageUrl,
   category,
-  headline,
+  title,
   author,
   date,
+  featured,
 }) => (
-  <Paper elevation={3} className="shadow post">
+  <Paper elevation={3} className={`shadow ${featured ? "feat-post" : "post"}`}>
     <Box
       className="post-image"
       style={{ backgroundImage: `url(${imageUrl})` }}
@@ -63,7 +57,7 @@ const Post: React.FC<PostProps> = ({
     <Box className="post-info">
       <Typography className="post-cat">{category}</Typography>
       <Typography className="post-head" component={Link} href="#">
-        {headline}
+        {title}
       </Typography>
       <Box className="addinfo-wrapper">
         <Typography component={Link} href="#">
@@ -77,28 +71,34 @@ const Post: React.FC<PostProps> = ({
 
 const Posts: React.FC = () => (
   <Box className="posts-wrapper posts">
-    {posts.map((post) =>
-      post.featured ? (
+    {posts.map((post: PostType) => {
+      const { id, imageUrl, category, title, author, date, content, featured } =
+        post;
+      return featured ? (
         <FeaturedPost
-          key={post.id}
-          imageUrl={post.imageUrl}
-          category={post.category}
-          headline={post.title}
-          author={post.author}
-          date={post.date}
-          content={post.content}
+          key={id}
+          id={id}
+          imageUrl={imageUrl}
+          category={category}
+          title={title}
+          author={author}
+          date={date}
+          content={content}
+          featured={featured}
         />
       ) : (
         <Post
-          key={post.id}
-          imageUrl={post.imageUrl}
-          category={post.category}
-          headline={post.title}
-          author={post.author}
-          date={post.date}
+          key={id}
+          id={id}
+          imageUrl={imageUrl}
+          category={category}
+          title={title}
+          author={author}
+          date={date}
+          featured={featured}
         />
-      )
-    )}
+      );
+    })}
   </Box>
 );
 
