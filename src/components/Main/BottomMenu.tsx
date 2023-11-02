@@ -1,32 +1,30 @@
 import React from "react";
-import { Box, Link, Divider } from "@mui/material";
+import { Box, Divider } from "@mui/material";
+import { Link } from "react-router-dom";
 import "./BottomMenu.scss";
 
 const BottomMenu: React.FC = () => {
   return (
     <Box>
       <Box className="logo-bottom">
-        <Link href="#" underline="none">
+        <Link to="/" className="logo-link">
           Fashion
         </Link>
         <Divider className="rectangle-bottom" orientation="horizontal" />
       </Box>
       <Box className="bottom-menu-wrapper">
         <Box className="bottom-menu">
-          <Link href="#" underline="none">
+          <Link to="/" className="menu-item">
             Home
           </Link>
-          <Link href="#" underline="none">
+          <Link to="/recipes" className="menu-item">
             Recipes
           </Link>
-          <Link href="#" underline="none">
+          <Link to="/article" className="menu-item">
             Article
           </Link>
-          <Link href="#" underline="none">
+          <Link to="/contact" className="menu-item">
             Contact
-          </Link>
-          <Link href="#" underline="none">
-            Purchase
           </Link>
         </Box>
       </Box>
