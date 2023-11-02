@@ -18,7 +18,7 @@ const ArticlePage: React.FC = () => {
             <Box className="articles-content">
               <Posts />
             </Box>
-            <PageNavigation />
+            {/* <PageNavigation /> */}
           </Grid>
           <Grid item xs={12} md={3}>
             <LeftBar

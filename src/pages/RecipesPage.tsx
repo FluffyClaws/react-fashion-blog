@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import { recipes } from "../utils/recipeData";
 import { Grid, Container, Box } from "@mui/material";
 import RecipePost from "../components/Main/RecipePost";
 import LeftBar from "../components/Main/LeftBar";
-import "./RecipesPage.scss";
-import BottomMenu from "../components/Main/BottomMenu";
-import BottomSocial from "../components/Main/BottomSocial";
 import PageNavigation from "../components/Main/PageNavigation";
+import { recipes as recipeData } from "../utils/recipeData";
+import "./RecipesPage.scss";
 
 const RecipesPage: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [shuffledRecipes, setShuffledRecipes] = useState(recipeData);
+
+  const recipesPerPage = 10; // Adjust as needed
+  const totalPages = Math.ceil(shuffledRecipes.length / recipesPerPage);
+
+  useEffect(() => {
+    const shuffled = shuffleArray([...recipeData]);
+    setShuffledRecipes(shuffled);
+  }, [currentPage]);
+
+  const indexOfLastRecipe = currentPage * recipesPerPage;
+  const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
+  const currentRecipes = shuffledRecipes.slice(
+    indexOfFirstRecipe,
+    indexOfLastRecipe
+  );
+
   return (
     <>
       <Header />
@@ -18,36 +34,32 @@ const RecipesPage: React.FC = () => {
         <Grid container spacing={4}>
           <Grid item xs={12} md={9}>
             <Box className="recipes-content">
-              {recipes.map((recipe) => (
-                <RecipePost
-                  key={recipe.id}
-                  id={recipe.id}
-                  category={recipe.category}
-                  title={recipe.title}
-                  author={recipe.author}
-                  date={recipe.date}
-                  content={recipe.content}
-                />
+              {currentRecipes.map((recipe) => (
+                <RecipePost key={recipe.id} {...recipe} />
               ))}
             </Box>
-            <PageNavigation />
+            <PageNavigation
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={setCurrentPage}
+            />
           </Grid>
           <Grid item xs={12} md={3}>
-            <LeftBar
-              showAuthor={true}
-              showFeatured={false}
-              showCategories={false}
-              showSocialLinks={true}
-              showTags={false}
-            />
+            <LeftBar />
           </Grid>
         </Grid>
       </Container>
-      <BottomMenu />
-      <BottomSocial />
       <Footer />
     </>
   );
 };
 
 export default RecipesPage;
+
+function shuffleArray(array: any[]) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}

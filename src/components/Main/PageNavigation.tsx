@@ -1,23 +1,36 @@
 import React from "react";
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import "./PageNavigation.scss";
 
-const PageNavigation: React.FC = () => {
+type PageNavigationProps = {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+};
+
+const PageNavigation: React.FC<PageNavigationProps> = ({
+  currentPage,
+  totalPages,
+  onPageChange,
+}) => {
+  const handlePrevPage = () => {
+    if (currentPage > 1) onPageChange(currentPage - 1);
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) onPageChange(currentPage + 1);
+  };
+
   return (
     <Box className="page-nav-wrapper">
       <Box className="page-nav-box">
-        <Link href="#" underline="none" className="prev-page">
+        <Button onClick={handlePrevPage} disabled={currentPage === 1}>
           PREV PAGE
-        </Link>
-        {[1, 2, 3, "...", 8].map((pageNum) => (
-          <Link href="#" key={pageNum} underline="none" className="page-num">
-            <Typography variant="body1">{pageNum}</Typography>
-          </Link>
-        ))}
-        <Link href="#" underline="none" className="next-page">
+        </Button>
+        {/* Render page numbers here */}
+        <Button onClick={handleNextPage} disabled={currentPage === totalPages}>
           NEXT PAGE
-          <Box className="arrow-next" />
-        </Link>
+        </Button>
       </Box>
     </Box>
   );

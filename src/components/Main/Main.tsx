@@ -16,7 +16,7 @@ const Main: React.FC = () => {
         <Grid container spacing={4}>
           <Grid item xs={12} md={9}>
             <Posts />
-            <PageNavigation />
+            {/* <PageNavigation /> */}
           </Grid>
           <Grid item xs={12} md={3}>
             <LeftBar />
