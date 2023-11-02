@@ -8,6 +8,7 @@ import LeftBar from "../components/Main/LeftBar";
 import "./RecipesPage.scss";
 import BottomMenu from "../components/Main/BottomMenu";
 import BottomSocial from "../components/Main/BottomSocial";
+import PageNavigation from "../components/Main/PageNavigation";
 
 const RecipesPage: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const RecipesPage: React.FC = () => {
                 />
               ))}
             </Box>
+            <PageNavigation />
           </Grid>
           <Grid item xs={12} md={3}>
             <LeftBar />
