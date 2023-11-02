@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Paper } from "@mui/material";
-import { Recipe } from "../../types/postTypes";
+import { Recipe } from "../../types/types";
 import "./RecipePost.scss";
 
 const RecipePost: React.FC<Recipe> = ({

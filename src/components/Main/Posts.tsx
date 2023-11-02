@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Link, Paper } from "@mui/material";
-import { Post as PostType } from "../../types/postTypes";
+import { Post as PostType } from "../../types/types";
 import { posts } from "../../utils/postData";
 import "./Posts.scss";
 

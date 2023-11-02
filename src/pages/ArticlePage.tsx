@@ -21,7 +21,13 @@ const ArticlePage: React.FC = () => {
             <PageNavigation />
           </Grid>
           <Grid item xs={12} md={3}>
-            <LeftBar />
+            <LeftBar
+              showAuthor={false}
+              showFeatured={true}
+              showCategories={true}
+              showSocialLinks={false}
+              showTags={true}
+            />
           </Grid>
         </Grid>
       </Container>

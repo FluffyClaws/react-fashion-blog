@@ -33,7 +33,13 @@ const RecipesPage: React.FC = () => {
             <PageNavigation />
           </Grid>
           <Grid item xs={12} md={3}>
-            <LeftBar />
+            <LeftBar
+              showAuthor={true}
+              showFeatured={false}
+              showCategories={false}
+              showSocialLinks={true}
+              showTags={false}
+            />
           </Grid>
         </Grid>
       </Container>

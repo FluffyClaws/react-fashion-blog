@@ -17,3 +17,10 @@ export type Post = {
   featured?: boolean;
   content?: string;
 };
+export type LeftBarProps = {
+  showAuthor?: boolean;
+  showFeatured?: boolean;
+  showCategories?: boolean;
+  showSocialLinks?: boolean;
+  showTags?: boolean;
+};

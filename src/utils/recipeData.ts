@@ -1,4 +1,4 @@
-import { Recipe } from "../types/postTypes";
+import { Recipe } from "../types/types";
 
 export const recipes: Recipe[] = [
   {
