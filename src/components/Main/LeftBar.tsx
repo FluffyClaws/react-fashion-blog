@@ -16,9 +16,8 @@ const LeftBar: React.FC<LeftBarProps & { posts: Post[] }> = ({
   onCategoryChange = () => {},
   showSocialLinks = true,
   showTags = true,
-  posts, // Make sure to pass the posts as a prop
+  posts,
 }) => {
-  // Use the imported function to get categories with counts
   const categoriesWithCount = getCategoryCounts(posts);
 
   return (
