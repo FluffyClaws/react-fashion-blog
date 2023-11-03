@@ -1,56 +1,44 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
 .bottom-menu-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 29px;
+  @include flex-center;
+  margin-bottom: $spacing-large;
 }
 
 .bottom-menu {
-  display: flex;
-  justify-content: space-evenly;
+  @include flex-space-evenly;
   width: 352px;
   height: 18px;
 
   a {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: #666666;
-    text-decoration: none;
-
-    &:hover {
-      color: #c9a96e;
-    }
+    @include font-pt-serif(400, 14px, 18px);
+    @include text-link;
+    padding: 8px $spacing-medium;
   }
 }
+
 .logo-bottom {
   text-align: center;
-  margin-bottom: 60px;
-  margin-top: 100px;
+  margin: $spacing-xlarge 0;
 
   a {
-    width: 100%;
-    text-align: center;
-    font-family: "PT Serif", serif;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 32px;
+    @include font-pt-serif(700, 25px, 32px);
+    width: 126px;
     letter-spacing: 2.5px;
-    color: #171717;
-    height: 32px;
+    @include text-link;
     text-transform: uppercase;
-    text-decoration: none;
   }
 
   .rectangle-bottom {
     width: 125px;
     height: 6px;
-    margin-top: -10px;
+    margin-top: -$spacing-small;
     opacity: 0.35;
-    background-color: #c9a96e;
+    background-color: $color-secondary;
     position: relative;
-    left: 45%;
-    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: $zindex-default;
   }
 }

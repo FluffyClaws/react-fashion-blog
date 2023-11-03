@@ -1,3 +1,57 @@
-.contact-content {
-  margin-top: 50px;
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.contact-container {
+  .contact-content {
+    margin-top: 50px;
+
+    @include flex-column-center;
+    padding: $spacing-large 0;
+
+    .contact-title {
+      @include font-pt-serif(700, 28px, 34px);
+      color: $color-primary;
+      margin-bottom: $spacing-medium;
+    }
+
+    .contact-description {
+      @include font-pt-sans;
+      color: $color-tertiary;
+      margin-bottom: $spacing-small;
+    }
+
+    .contact-form {
+      .contact-input {
+        margin: $spacing-small 0;
+        & .MuiOutlinedInput-root {
+          &.Mui-focused .MuiOutlinedInput-notchedOutline {
+            border-color: $color-secondary;
+          }
+        }
+        & .MuiInputLabel-root.Mui-focused {
+          color: $color-secondary;
+        }
+      }
+
+      .contact-submit {
+        @include font-pt-serif(700);
+        margin-top: $spacing-medium;
+        background-color: $color-secondary;
+        color: $white;
+        padding: $spacing-small $spacing-large;
+        &:hover {
+          background-color: darken($color-secondary, 10%);
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .contact-container {
+    .contact-content {
+      padding: $spacing-medium;
+    }
+  }
 }

@@ -1,7 +1,9 @@
+@import "../../styles/base";
+
 .header {
   max-width: 1920px;
   height: 100px;
-  background-color: rgb(255, 255, 255);
+  background-color: $color-background-white;
 }
 
 .header-container {
@@ -10,10 +12,10 @@
 }
 
 .row {
-  margin: 0 -15px;
-  max-width: 1915px;
+  margin: 0 -$spacing-small;
+  max-width: calc(100% - #{$spacing-small * 2});
 }
 
 [class*="col-"] {
-  padding-left: 15px;
+  padding-left: $spacing-small;
 }

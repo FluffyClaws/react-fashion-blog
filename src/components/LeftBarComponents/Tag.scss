@@ -1,38 +1,33 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .tags-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: $spacing-small;
   max-width: 270px;
-  margin-top: 20px;
+  margin-top: $spacing-large;
 
   .tags {
-    flex: 1 0 calc(33.3333% - 10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1 0 calc(33.3333% - #{$spacing-small});
+    @include flex-center;
     height: 30px;
     background-color: #f8f9fa;
-    padding: 0 10px;
+    padding: 0 $spacing-medium;
 
     .tag-link {
-      font-family: "PT Serif";
-      font-size: 14px;
-      line-height: 19px;
-      color: #666666;
-      text-decoration: none;
+      @include font-pt-serif;
+      @include text-link;
       display: flex;
       align-items: center;
       width: 100%;
       justify-content: center;
 
       p {
-        padding-top: 5px;
+        padding-top: $spacing-small;
         text-align: center;
         height: 30px;
         background-color: #f8f9fa;
-        font-family: "PT Serif";
-        font-size: 14px;
-        color: #666666;
       }
     }
   }

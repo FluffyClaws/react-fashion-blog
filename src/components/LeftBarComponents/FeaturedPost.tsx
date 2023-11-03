@@ -3,7 +3,7 @@ import { Box, Typography, Paper, Link } from "@mui/material";
 import "./FeaturedPost.scss";
 
 const FeaturedPost: React.FC<{ picClass: string }> = ({ picClass }) => (
-  <Paper elevation={3} className="shadow">
+  <Paper elevation={3}>
     <Box className={`feat-left-post ${picClass}`}></Box>
     <Box className="feat-left-post-info">
       <Typography className="post-cat" align="center">

@@ -1,6 +1,8 @@
+@import "../../styles/variables";
+
 .posts-wrapper {
-  margin-top: 50px;
+  margin-top: $spacing-xlarge;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: $spacing-large;
 }

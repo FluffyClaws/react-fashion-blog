@@ -1,75 +1,47 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .page-nav-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+  @include flex-column-center;
+  margin-top: $spacing-xlarge;
 
   .page-nav-box {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include flex-space-evenly;
     width: 509px;
     height: 50px;
-    border: 1px solid #e5e5e5;
-    background-color: #ffffff;
+    border: 1px solid $border-color;
+    background-color: $white;
 
-    a {
-      display: flex;
-      text-decoration: none;
-      color: inherit;
+    Button {
+      @include font-pt-serif;
+      text-transform: uppercase;
+      color: $color-primary;
+      transition: color 0.3s ease;
 
       &:hover {
-        text-decoration: none;
-        color: #c9a96e;
+        background-color: transparent;
+        color: $color-secondary;
       }
-    }
-    p {
-      text-decoration: none;
-      font-family: "HK Grotesk";
-      font-size: 16px;
-      line-height: 16px;
-      color: #171717;
-      &:hover {
-        color: #c9a96e;
-      }
-    }
-    .prev-page {
-      height: 16px;
-      color: #a2a2a2;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 14px;
-      line-height: 16px;
-      background-image: url("../../..//public/images/prev-page.png");
-      background-position: 0px 2px;
-      background-repeat: no-repeat;
-      padding-left: 14px;
-    }
 
-    .page-num {
-      &:hover {
-        color: #c9a96e;
+      &:disabled {
+        color: $color-tertiary;
       }
     }
 
+    .prev-page,
     .next-page {
-      height: 16px;
-      color: #a2a2a2;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 14px;
-      line-height: 16px;
+      @include font-pt-serif(400, 14px, 16px);
+      color: $color-tertiary;
+      background-position: 0 2px;
+      padding: 0 $spacing-small;
 
       &:hover {
-        color: #c9a96e;
+        color: $color-secondary;
       }
+    }
 
-      .arrow-next {
-        height: 16px;
-        width: 4px;
-        background-image: url("../../..//public/images/prev-page.png");
-        background-position: 0px 3px;
-        background-repeat: no-repeat;
-        transform: rotate(180deg);
-        padding-right: 14px;
-      }
+    .arrow-next {
+      transform: rotate(180deg);
     }
   }
 }

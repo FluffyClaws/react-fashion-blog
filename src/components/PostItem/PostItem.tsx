@@ -12,10 +12,7 @@ const PostItem: React.FC<Post & { isFeatured: boolean }> = ({
   content,
   isFeatured,
 }) => (
-  <Paper
-    elevation={3}
-    className={`shadow ${isFeatured ? "feat-post" : "post"}`}
-  >
+  <Paper elevation={3} className={` ${isFeatured ? "feat-post" : "post"}`}>
     <Box
       className={`${isFeatured ? "feat-post-main-image" : "post-image"}`}
       style={{ backgroundImage: `url(${imageUrl})` }}

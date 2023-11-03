@@ -1,70 +1,55 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .author {
   margin-bottom: 70px;
+
   .author-pic {
     background-image: url("../../..//public/images/auth-pic.png");
     background-position: center;
     background-size: cover;
     height: 180px;
     width: 270px;
-    margin-top: 20px;
+    margin-top: $spacing-medium;
   }
 
   .author-info {
     width: 270px;
     height: 165px;
-    background-color: #ffffff;
+    background-color: $white;
 
     .author-name {
-      font-family: "PT Serif";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 21px;
+      @include font-pt-serif(700, 16px, 21px);
       text-align: center;
-      color: #171717;
-      padding-top: 20px;
+      color: $color-primary;
+      padding-top: $spacing-medium;
     }
 
     .author-occup {
-      font-family: "PT Serif";
+      @include font-pt-serif(400, 14px, 19px);
       font-style: italic;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 19px;
       text-align: center;
-      padding-top: 4px;
-      color: #b1b1b1;
+      padding-top: $spacing-small;
+      color: $color-tertiary;
     }
 
     .author-bio {
-      font-family: "PT Sans";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 24px;
+      @include font-pt-sans;
       text-align: center;
-      color: #666666;
-      padding-top: 15px;
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 14px;
+      padding: $spacing-medium $spacing-medium $spacing-small;
     }
   }
 
   .more-author {
     height: 40px;
-    border-top: 1px solid #e5e5e5;
-    padding-top: 5px;
+    border-top: 1px solid $border-color;
+    padding-top: $spacing-small;
     text-align: center;
 
     a {
-      font-family: "PT Serif";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 16px;
+      @include font-pt-serif(400, 12px, 16px);
       text-transform: uppercase;
-      color: #c9a96e;
+      color: $color-secondary;
       text-decoration: none;
     }
   }
