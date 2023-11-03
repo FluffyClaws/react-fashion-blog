@@ -13,6 +13,7 @@ import LeftBar from "../components/Main/LeftBar";
 import BottomMenu from "../components/Main/BottomMenu";
 import BottomSocial from "../components/Main/BottomSocial";
 import "./ContactPage.scss";
+import { posts } from "../utils/postData";
 
 const ContactPage = () => {
   return (
@@ -85,6 +86,7 @@ const ContactPage = () => {
               showCategories={false}
               showSocialLinks={true}
               showTags={false}
+              posts={posts}
             />
           </Grid>
         </Grid>

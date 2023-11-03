@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { Grid, Container, Box } from "@mui/material";
@@ -9,12 +9,25 @@ import PageNavigation from "../components/Main/PageNavigation";
 import Posts from "../components/Main/Posts";
 import usePagination from "../utils/usePagination";
 import { Post } from "../types/types";
-import { posts as postData } from "../utils/postData";
+import { posts as postData, posts } from "../utils/postData";
+import {
+  createFilterCondition,
+  handleCategoryChange,
+} from "../utils/postUtils";
 
 const ArticlePage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const postsPerPage = 10;
+
+  const filterCondition = createFilterCondition(selectedCategory);
+
   const { currentPage, setCurrentPage, totalPages, paginatedData } =
-    usePagination<Post>(postData, postsPerPage);
+    usePagination<Post>(postData, postsPerPage, filterCondition);
+
+  const onCategoryChange = handleCategoryChange(
+    setSelectedCategory,
+    setCurrentPage
+  );
 
   return (
     <>
@@ -38,6 +51,8 @@ const ArticlePage: React.FC = () => {
               showCategories={true}
               showSocialLinks={false}
               showTags={true}
+              onCategoryChange={onCategoryChange}
+              posts={posts}
             />
           </Grid>
         </Grid>

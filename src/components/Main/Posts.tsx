@@ -1,12 +1,8 @@
 import React from "react";
 import PostList from "../PostList/PostList";
-import { Post } from "../../types/types";
+import { PostListProps } from "../../types/types";
 
-interface PostsProps {
-  posts: Post[];
-}
-
-const Posts: React.FC<PostsProps> = ({ posts }) => {
+const Posts: React.FC<PostListProps> = ({ posts }) => {
   return <PostList posts={posts} />;
 };
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { Container, Grid } from "@mui/material";
@@ -10,13 +10,33 @@ import LeftBar from "../components/Main/LeftBar";
 import PageNavigation from "../components/Main/PageNavigation";
 import Posts from "../components/Main/Posts";
 import { Post } from "../types/types";
-import { posts as postData } from "../utils/postData";
+import { posts as postData, posts } from "../utils/postData";
 import usePagination from "../utils/usePagination";
+import {
+  createFilterCondition,
+  handleCategoryChange,
+} from "../utils/postUtils";
 
 const HomePage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const postsPerPage = 10;
+
+  const filterCondition = createFilterCondition(selectedCategory);
+
   const { currentPage, setCurrentPage, totalPages, paginatedData } =
-    usePagination<Post>(postData, postsPerPage);
+    usePagination<Post>(postData, postsPerPage, filterCondition);
+
+  const onCategoryChange = handleCategoryChange(
+    setSelectedCategory,
+    setCurrentPage
+  );
+
+  const filteredPosts = paginatedData.filter((post) => {
+    return (
+      selectedCategory === "All" ||
+      post.category.toUpperCase() === selectedCategory.toUpperCase()
+    );
+  });
 
   return (
     <>
@@ -25,7 +45,7 @@ const HomePage: React.FC = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12} md={9}>
-            <Posts posts={paginatedData} />
+            <Posts posts={filteredPosts} />
             <PageNavigation
               currentPage={currentPage}
               totalPages={totalPages}
@@ -33,7 +53,7 @@ const HomePage: React.FC = () => {
             />
           </Grid>
           <Grid item xs={12} md={3}>
-            <LeftBar />
+            <LeftBar onCategoryChange={onCategoryChange} posts={posts} />
           </Grid>
         </Grid>
       </Container>

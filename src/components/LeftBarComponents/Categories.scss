@@ -1,26 +1,28 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
 .categories {
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
+  @include flex-column-start;
+  padding-top: $spacing-large;
 
   a {
-    text-decoration: none;
-    display: flex;
+    width: 100%;
+    color: $color-tertiary;
+    @include font-pt-serif;
+    @include flex-row-center;
     justify-content: space-between;
-    font-family: "PT Serif";
-    font-size: 14px;
-    line-height: 19px;
-    color: #666666;
-    padding: 14px 0 15px;
-    border-bottom: 1px solid #e5e5e5;
-
+    padding: $spacing-medium 0;
+    border-bottom: 1px solid $border-color;
+    &:hover {
+      color: $color-secondary;
+    }
     &:last-child {
       border: none;
-      margin-bottom: 70px;
+      margin-bottom: $spacing-xlarge;
     }
   }
 
   span {
-    display: flex;
+    @include flex-row-center;
   }
 }

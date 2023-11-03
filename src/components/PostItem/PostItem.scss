@@ -46,6 +46,7 @@ html .feat-main-addinfo-wrapper {
   flex-direction: row;
   justify-content: center;
   gap: $spacing-small;
+  align-items: baseline;
 
   a {
     @include text-link;
@@ -55,6 +56,8 @@ html .feat-main-addinfo-wrapper {
 
   p {
     @include font-pt-serif;
+    font-size: 12px;
+
     padding-bottom: $spacing-medium;
   }
 }
@@ -71,7 +74,7 @@ html .feat-post {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: $spacing-small 0 0 $spacing-medium;
+    padding: $spacing-small $spacing-medium;
   }
 
   &-content {

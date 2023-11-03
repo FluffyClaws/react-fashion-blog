@@ -8,11 +8,12 @@ import PageNavigation from "../components/Main/PageNavigation";
 import { recipes as recipeData } from "../utils/recipeData";
 import "./RecipesPage.scss";
 import usePagination from "../utils/usePagination";
+import { posts } from "../utils/postData";
 
 const RecipesPage: React.FC = () => {
   const recipesPerPage = 10;
   const { currentPage, setCurrentPage, totalPages, paginatedData } =
-    usePagination(recipeData, recipesPerPage);
+    usePagination(recipeData, recipesPerPage, () => true);
 
   return (
     <>
@@ -32,7 +33,14 @@ const RecipesPage: React.FC = () => {
             />
           </Grid>
           <Grid item xs={12} md={3}>
-            <LeftBar />
+            <LeftBar
+              showAuthor={true}
+              showFeatured={false}
+              showCategories={false}
+              showSocialLinks={true}
+              showTags={false}
+              posts={posts}
+            />
           </Grid>
         </Grid>
       </Container>
