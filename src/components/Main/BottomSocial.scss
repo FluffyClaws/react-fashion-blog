@@ -1,13 +1,14 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
 .bottom-social-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+  @include flex-center;
+  margin-bottom: $spacing-large;
 }
 
 .bottom-social {
-  display: flex;
+  @include flex-space-evenly;
   width: 304px;
-  justify-content: space-evenly;
 }
 
 .social-circle {

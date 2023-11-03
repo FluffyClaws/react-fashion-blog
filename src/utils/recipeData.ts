@@ -5,7 +5,7 @@ export const recipes: Recipe[] = [
     id: 1,
     category: "Vegetarian",
     title: "Delicious Vegetarian Pizza",
-    author: "Chef Goodfood",
+    author: "Kate Willems",
     date: "October 26, 2023",
     content:
       "A delightful pizza topped with an assortment of fresh vegetables and mozzarella cheese.",
@@ -14,7 +14,7 @@ export const recipes: Recipe[] = [
     id: 2,
     category: "Meat",
     title: "Savory Meat Pizza",
-    author: "Chef Goodfood",
+    author: "Kate Willems",
     date: "October 26, 2023",
     content:
       "A delightful pizza topped with an assortment of fresh vegetables and mozzarella cheese.",
@@ -23,7 +23,7 @@ export const recipes: Recipe[] = [
     id: 3,
     category: "Soup",
     title: "Hearty Chicken Soup",
-    author: "Chef Goodfood",
+    author: "Kate Willems",
     date: "October 26, 2023",
     content: "A comforting bowl of chicken soup, perfect for cold evenings.",
   },
@@ -31,7 +31,7 @@ export const recipes: Recipe[] = [
     id: 4,
     category: "Vegetarian",
     title: "Zesty Vegetarian Taco Salad",
-    author: "Chef Goodfood",
+    author: "Kate Willems",
     date: "October 26, 2023",
     content:
       "A delightful pizza topped with an assortment of fresh vegetables and mozzarella cheese.",
@@ -40,7 +40,7 @@ export const recipes: Recipe[] = [
     id: 5,
     category: "Dessert",
     title: "Chocolate Lava Cake",
-    author: "Chef Sweettooth",
+    author: "Kate Willems",
     date: "October 27, 2023",
     content:
       "A rich and gooey chocolate cake with a molten center, served with vanilla ice cream.",
@@ -49,7 +49,7 @@ export const recipes: Recipe[] = [
     id: 6,
     category: "Seafood",
     title: "Garlic Butter Shrimp Pasta",
-    author: "Chef Seafare",
+    author: "Kate Willems",
     date: "October 28, 2023",
     content:
       "Tender shrimp tossed in a garlic butter sauce and served over a bed of al dente pasta.",
@@ -58,7 +58,7 @@ export const recipes: Recipe[] = [
     id: 7,
     category: "Vegan",
     title: "Ultimate Vegan Burger",
-    author: "Chef Plantstrong",
+    author: "Kate Willems",
     date: "October 29, 2023",
     content:
       "A juicy plant-based patty topped with vegan cheese and a variety of fresh toppings.",
@@ -67,7 +67,7 @@ export const recipes: Recipe[] = [
     id: 8,
     category: "Breakfast",
     title: "Classic Belgian Waffles",
-    author: "Chef Morningglory",
+    author: "Kate Willems",
     date: "October 30, 2023",
     content:
       "Crispy on the outside, fluffy on the inside, these waffles are a breakfast delight.",
@@ -76,7 +76,7 @@ export const recipes: Recipe[] = [
     id: 9,
     category: "Healthy",
     title: "Kale and Quinoa Salad",
-    author: "Chef Wholesome",
+    author: "Kate Willems",
     date: "October 31, 2023",
     content:
       "A superfood salad packed with nutrients and dressed with a lemon vinaigrette.",
@@ -85,7 +85,7 @@ export const recipes: Recipe[] = [
     id: 10,
     category: "Snack",
     title: "Homemade Soft Pretzels",
-    author: "Chef Snacktime",
+    author: "Kate Willems",
     date: "November 1, 2023",
     content:
       "Warm, soft pretzels with a golden crust, perfect for dipping in mustard or cheese sauce.",
@@ -94,7 +94,7 @@ export const recipes: Recipe[] = [
     id: 11,
     category: "Pasta",
     title: "Creamy Alfredo Fettuccine",
-    author: "Chef Pastalover",
+    author: "Kate Willems",
     date: "November 2, 2023",
     content:
       "A classic Italian pasta dish in a rich and creamy garlic parmesan sauce.",
@@ -103,7 +103,7 @@ export const recipes: Recipe[] = [
     id: 12,
     category: "Grill",
     title: "BBQ Chicken Skewers",
-    author: "Chef Grillmaster",
+    author: "Kate Willems",
     date: "November 3, 2023",
     content:
       "Juicy chicken pieces and fresh vegetables grilled to perfection with a smoky BBQ sauce.",
@@ -112,7 +112,7 @@ export const recipes: Recipe[] = [
     id: 13,
     category: "Salad",
     title: "Mediterranean Chickpea Salad",
-    author: "Chef Olive",
+    author: "Kate Willems",
     date: "November 4, 2023",
     content:
       "A refreshing salad bursting with the flavors of the Mediterranean, featuring chickpeas, cucumber, and feta.",
@@ -121,7 +121,7 @@ export const recipes: Recipe[] = [
     id: 14,
     category: "Appetizer",
     title: "Stuffed Mushrooms",
-    author: "Chef Fungi",
+    author: "Kate Willems",
     date: "November 5, 2023",
     content:
       "Mushroom caps filled with a savory mixture of cheese, garlic, and herbs, baked until golden.",
@@ -130,7 +130,7 @@ export const recipes: Recipe[] = [
     id: 15,
     category: "Beverage",
     title: "Classic Mojito Cocktail",
-    author: "Chef Mixit",
+    author: "Kate Willems",
     date: "November 6, 2023",
     content:
       "A refreshing cocktail with muddled mint, lime, sugar, white rum, and soda water.",
@@ -139,7 +139,7 @@ export const recipes: Recipe[] = [
     id: 16,
     category: "Bakery",
     title: "Artisan Sourdough Bread",
-    author: "Chef Yeasty",
+    author: "Kate Willems",
     date: "November 7, 2023",
     content:
       "Crusty on the outside, chewy on the inside, this sourdough bread is perfect for any meal.",
@@ -148,7 +148,7 @@ export const recipes: Recipe[] = [
     id: 17,
     category: "Dessert",
     title: "New York Cheesecake",
-    author: "Chef Creamcheese",
+    author: "Kate Willems",
     date: "November 8, 2023",
     content:
       "A creamy, decadent cheesecake with a graham cracker crust and a rich, velvety filling.",
@@ -157,7 +157,7 @@ export const recipes: Recipe[] = [
     id: 18,
     category: "Vegan",
     title: "Vegan Chocolate Brownies",
-    author: "Chef Coco",
+    author: "Kate Willems",
     date: "November 9, 2023",
     content:
       "Fudgy, rich vegan brownies made with cocoa and dark chocolate, a treat for all.",
@@ -166,7 +166,7 @@ export const recipes: Recipe[] = [
     id: 19,
     category: "Soup",
     title: "Roasted Tomato Basil Soup",
-    author: "Chef Soupy",
+    author: "Kate Willems",
     date: "November 10, 2023",
     content:
       "A warm, comforting soup made with roasted tomatoes, fresh basil, and a touch of cream.",
@@ -175,7 +175,7 @@ export const recipes: Recipe[] = [
     id: 20,
     category: "Fish",
     title: "Pan-Seared Salmon with Dill Sauce",
-    author: "Chef River",
+    author: "Kate Willems",
     date: "November 11, 2023",
     content:
       "Perfectly seared salmon fillets served with a creamy dill sauce and steamed vegetables.",
@@ -184,7 +184,7 @@ export const recipes: Recipe[] = [
     id: 21,
     category: "Pasta",
     title: "Spaghetti Aglio e Olio",
-    author: "Chef Garlic",
+    author: "Kate Willems",
     date: "November 12, 2023",
     content:
       "A simple yet delicious pasta dish with garlic, olive oil, parsley, and red pepper flakes.",
@@ -193,7 +193,7 @@ export const recipes: Recipe[] = [
     id: 22,
     category: "Healthy",
     title: "Avocado Toast with Poached Egg",
-    author: "Chef Avocado",
+    author: "Kate Willems",
     date: "November 13, 2023",
     content:
       "Creamy avocado spread on toasted artisan bread, topped with a perfectly poached egg.",
@@ -202,7 +202,7 @@ export const recipes: Recipe[] = [
     id: 23,
     category: "Breakfast",
     title: "Buttermilk Pancakes",
-    author: "Chef Flapjack",
+    author: "Kate Willems",
     date: "November 14, 2023",
     content:
       "Fluffy buttermilk pancakes served with maple syrup and a dollop of whipped cream.",
@@ -211,7 +211,7 @@ export const recipes: Recipe[] = [
     id: 24,
     category: "Meat",
     title: "Herb-Crusted Rack of Lamb",
-    author: "Chef Roast",
+    author: "Kate Willems",
     date: "November 15, 2023",
     content:
       "A rack of lamb coated with a herb crust, roasted to tender perfection.",
@@ -220,7 +220,7 @@ export const recipes: Recipe[] = [
     id: 25,
     category: "Vegetarian",
     title: "Stuffed Bell Peppers",
-    author: "Chef Veggie",
+    author: "Kate Willems",
     date: "November 16, 2023",
     content:
       "Bell peppers stuffed with a savory mixture of rice, vegetables, and spices, baked until tender.",

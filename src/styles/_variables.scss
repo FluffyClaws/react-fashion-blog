@@ -1,0 +1,29 @@
+// Color Palette
+$color-primary: #171717;
+$color-secondary: #c9a96e;
+$color-tertiary: #666666;
+$color-link-hover: #c9a96e;
+$color-footer-border: #e5e5e5;
+$color-shadow: lightgrey;
+$white: #ffffff;
+$color-background-white: rgb(255, 255, 255);
+
+// Typography
+$font-primary: "PT Serif", serif;
+$font-secondary: "PT Sans", sans-serif;
+
+// Spacing
+$spacing-small: 5px;
+$spacing-medium: 15px;
+$spacing-large: 30px;
+$spacing-xlarge: 50px;
+
+// Borders
+$border-color: #e5e5e5;
+
+// Shadows
+$shadow-default: 0 8px 20px -10px $color-shadow;
+
+// Z-index
+$zindex-default: 0;
+$zindex-overlay: 1;

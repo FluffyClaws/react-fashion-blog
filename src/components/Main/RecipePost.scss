@@ -1,34 +1,29 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .recipe-post {
   width: 370px;
-  height: 210px;
-  box-shadow: 0 8px 20px -10px lightgrey;
-  margin-bottom: 30px;
+  margin-bottom: $spacing-large;
 
   .recipe-post-info {
     padding: 25px 30px;
-    background-color: #ffffff;
+    background-color: $white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
 
   .post-cat {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
+    @include font-pt-serif(400, 12px, 16px);
     text-transform: uppercase;
-    color: #c9a96e;
+    color: $color-secondary;
     text-align: left;
   }
 
   .recipe-main-head {
-    font-family: "PT Serif", serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-    color: #171717;
-    margin-top: 10px;
+    @include font-pt-serif(400, 20px, 28px);
+    color: $color-primary;
+    margin-top: $spacing-small;
     text-decoration: none;
     text-align: left;
   }
@@ -36,28 +31,18 @@
   .recipe-main-addinfo-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 15px;
-    margin-top: 10px;
+    gap: $spacing-medium;
+    margin-top: $spacing-small;
     align-items: center;
   }
 
   .recipe-main-addinfo-wrapper p {
-    font-family: "PT Serif";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    color: #666666;
+    @include font-pt-serif;
     text-decoration: none;
   }
 
   .recipe-post-main-cont {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    padding: 14px 20px 0 0;
-    color: #666666;
+    @include font-pt-sans;
+    padding: $spacing-medium $spacing-large 0 0;
   }
 }

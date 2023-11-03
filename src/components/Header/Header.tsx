@@ -12,7 +12,13 @@ const Header: React.FC = () => {
           <Grid item xs={6}>
             <Logo />
           </Grid>
-          <Grid item xs={6} container justifyContent="flex-end">
+          <Grid
+            item
+            xs={6}
+            container
+            justifyContent="flex-end"
+            alignItems={"center"}
+          >
             <Menu />
           </Grid>
         </Grid>

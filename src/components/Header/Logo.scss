@@ -1,23 +1,21 @@
+@import "../../styles/base";
+
 .logo {
   height: 32px;
-}
 
-.logo a {
-  font-family: "PT Serif", serif;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 32px;
-  width: 126px;
-  letter-spacing: 2.5px;
-  color: #171717;
-  text-decoration: none;
+  a {
+    @include font-pt-serif(700, 25px, 32px);
+    width: 126px;
+    letter-spacing: 2.5px;
+    @include text-link;
+  }
 }
 
 .rectangle {
   width: 125px;
   height: 6px;
   opacity: 0.35;
-  background-color: #c9a96e;
+  background-color: $color-secondary;
   position: relative;
-  margin-top: -10px;
+  margin-top: -$spacing-small;
 }

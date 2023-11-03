@@ -1,24 +1,13 @@
+@import "../../styles/base";
+
 .menu {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  @include flex-space-evenly;
   max-width: 369px;
   max-height: 18px;
-}
 
-.menu a {
-  font-family: "PT Serif", serif;
-  color: #171717;
-  font-weight: 400;
-  font-size: 14px;
-  font-style: normal;
-  padding-top: 8px;
-  padding-bottom: 6px;
-  padding-left: 16.25px;
-  padding-right: 16.25px;
-  text-decoration: none;
-}
-
-.menu a:hover {
-  color: #c9a96e;
+  a {
+    @include font-pt-serif(400, 14px);
+    padding: $spacing-small $spacing-medium;
+    @include text-link;
+  }
 }

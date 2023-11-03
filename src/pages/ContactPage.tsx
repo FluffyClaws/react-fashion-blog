@@ -14,22 +14,22 @@ import BottomMenu from "../components/Main/BottomMenu";
 import BottomSocial from "../components/Main/BottomSocial";
 import "./ContactPage.scss";
 
-const ContactPage: React.FC = () => {
+const ContactPage = () => {
   return (
     <>
       <Header />
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" className="contact-container">
         <Grid container spacing={4}>
           <Grid item xs={12} md={9}>
             <Box className="contact-content">
-              <Typography variant="h4" gutterBottom>
+              <Typography variant="h4" gutterBottom className="contact-title">
                 Contact Us
               </Typography>
-              <Typography paragraph>
+              <Typography paragraph className="contact-description">
                 If you have any questions or feedback, please don't hesitate to
                 reach out to us.
               </Typography>
-              <form noValidate autoComplete="off">
+              <form noValidate autoComplete="off" className="contact-form">
                 <TextField
                   required
                   id="contact-name"
@@ -37,6 +37,7 @@ const ContactPage: React.FC = () => {
                   fullWidth
                   margin="normal"
                   variant="outlined"
+                  className="contact-input"
                 />
                 <TextField
                   required
@@ -45,6 +46,7 @@ const ContactPage: React.FC = () => {
                   fullWidth
                   margin="normal"
                   variant="outlined"
+                  className="contact-input"
                 />
                 <TextField
                   id="contact-subject"
@@ -52,6 +54,7 @@ const ContactPage: React.FC = () => {
                   fullWidth
                   margin="normal"
                   variant="outlined"
+                  className="contact-input"
                 />
                 <TextField
                   required
@@ -62,8 +65,14 @@ const ContactPage: React.FC = () => {
                   variant="outlined"
                   multiline
                   rows={4}
+                  className="contact-input"
                 />
-                <Button variant="contained" color="primary" type="submit">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  type="submit"
+                  className="contact-submit"
+                >
                   Send Message
                 </Button>
               </form>

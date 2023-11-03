@@ -1,0 +1,27 @@
+@import "variables";
+@import "mixins";
+
+%text-common {
+  @include font-pt-serif;
+  color: $color-primary;
+  text-decoration: none;
+}
+
+%flex-row-center {
+  @include flex-center;
+  flex-direction: row;
+}
+
+%flex-column-center {
+  @include flex-center;
+  flex-direction: column;
+}
+
+%box-shadow {
+  box-shadow: $shadow-default;
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-primary;
+}
