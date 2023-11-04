@@ -44,10 +44,8 @@ const RecipesPage: React.FC = () => {
           <Grid item xs={12} md={3}>
             <LeftBar
               showAuthor={true}
-              showFeatured={false}
               showCategories={true}
               showSocialLinks={false}
-              showTags={false}
               posts={[]}
               categoriesWithCount={categoryCounts}
               onCategoryChange={handleCategoryChange}

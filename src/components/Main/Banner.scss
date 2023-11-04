@@ -24,15 +24,26 @@
   }
 
   &-text {
+    width: 50%;
     @include flex-column-start;
     padding-top: 490px;
     gap: $spacing-small;
     z-index: $zindex-overlay + 1;
     position: relative;
 
+    p {
+      color: $white;
+      @include font-pt-serif(400, 14px, 18px);
+    }
+
     a {
       color: $white;
       text-decoration: none;
+      @include font-pt-serif(400, 14px, 18px);
+
+      &:hover {
+        color: $color-secondary;
+      }
     }
 
     .cat {
@@ -49,8 +60,4 @@
       gap: $spacing-medium;
     }
   }
-}
-
-.by {
-  color: $color-tertiary;
 }

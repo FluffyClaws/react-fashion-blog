@@ -81,10 +81,8 @@ const ContactPage = () => {
           <Grid item xs={12} md={3}>
             <LeftBar
               showAuthor={true}
-              showFeatured={false}
               showCategories={false}
               showSocialLinks={true}
-              showTags={false}
               posts={posts}
               categoriesWithCount={[]}
             />

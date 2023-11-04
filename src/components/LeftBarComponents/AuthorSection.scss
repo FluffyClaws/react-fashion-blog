@@ -30,13 +30,15 @@
       font-style: italic;
       text-align: center;
       padding-top: $spacing-small;
+      padding-bottom: $spacing-small;
       color: $color-tertiary;
+      border-bottom: 1px solid $border-color;
     }
 
     .author-bio {
       @include font-pt-sans;
       text-align: center;
-      padding: $spacing-medium $spacing-medium $spacing-small;
+      padding: $spacing-medium $spacing-medium;
     }
   }
 

@@ -16,12 +16,14 @@ import useCategoryFilter from "../hooks/useCategoryFilter";
 
 const HomePage: React.FC = () => {
   const postsPerPage = 10;
+
+  const allCategories = [
+    "All",
+    ...Array.from(new Set(postData.map((post) => post.category))),
+  ];
+
   const { handleCategoryChange, filteredItems, categoryCounts } =
-    useCategoryFilter<Post>(
-      "All",
-      ["All", "Tourism", "Sport", "Clothes", "Fashion"],
-      postData
-    );
+    useCategoryFilter<Post>("All", allCategories, postData);
 
   const { currentPage, setCurrentPage, totalPages, paginatedData } =
     usePagination<Post>(filteredItems, postsPerPage, () => true);

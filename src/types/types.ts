@@ -14,14 +14,13 @@ export type Post = CategorizedItem & {
   imageUrl: string;
   featured?: boolean;
   content?: string;
+  banner?: boolean;
 };
 export type LeftBarProps = {
   showAuthor?: boolean;
-  showFeatured?: boolean;
   showCategories?: boolean;
   onCategoryChange?: (category: string) => void;
   showSocialLinks?: boolean;
-  showTags?: boolean;
 };
 export type PageNavigationProps = {
   currentPage: number;

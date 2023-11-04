@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Paper, Link } from "@mui/material";
+import { Box, Typography, Paper } from "@mui/material";
 import "./AuthorSection.scss";
 
 const AuthorSection: React.FC = () => (
@@ -17,11 +17,8 @@ const AuthorSection: React.FC = () => (
           </Typography>
           <Typography className="author-bio">
             Hi, I'm Sonia. Cooking is the way I express my creative side to the
-            world. Welcome to my Kitchen Corner on…
+            world. Welcome to my Kitchen!
           </Typography>
-        </Box>
-        <Box className="more-author">
-          <Link href="#">CONTINUE READING</Link>
         </Box>
       </Box>
     </Paper>

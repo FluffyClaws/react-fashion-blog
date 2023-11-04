@@ -1,8 +1,15 @@
 import React from "react";
-import { Box, Link } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
+import { posts } from "../../utils/postData";
 import "./Banner.scss";
 
 const Banner: React.FC = () => {
+  const bannerPost = posts.find((post) => post.banner === true);
+  if (!bannerPost) {
+    return null;
+  }
+  const { category, title, author, date } = bannerPost;
+
   return (
     <Box className="bigB">
       <Box className="gradient"></Box>
@@ -10,15 +17,14 @@ const Banner: React.FC = () => {
         <Box className="col-12">
           <Box className="bigB-text">
             <Link href="#" className="cat">
-              Vehicle
+              {category}
             </Link>
             <Link href="#" className="headline">
-              One of Saturn’s largest rings <br /> may be newer than anyone
+              {title}
             </Link>
             <Box className="bigB-wrapper">
-              <Link href="#">June 6, 2019</Link>
-              <Link href="#">Rickie Baroch</Link>
-              <Link href="#">4 comments</Link>
+              <Typography>{date}</Typography>
+              <Link href="#">{author}</Link>
             </Box>
           </Box>
         </Box>

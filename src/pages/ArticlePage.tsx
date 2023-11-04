@@ -15,12 +15,14 @@ import useCategoryFilter from "../hooks/useCategoryFilter";
 
 const ArticlePage: React.FC = () => {
   const postsPerPage = 10;
+
+  const allCategories = [
+    "All",
+    ...Array.from(new Set(postData.map((post) => post.category))),
+  ];
+
   const { handleCategoryChange, filteredItems, categoryCounts } =
-    useCategoryFilter<Post>(
-      "All",
-      ["All", "Tourism", "Sport", "Clothes", "Fashion"],
-      postData
-    );
+    useCategoryFilter<Post>("All", allCategories, postData);
 
   const { currentPage, setCurrentPage, totalPages, paginatedData } =
     usePagination<Post>(filteredItems, postsPerPage, () => true);
@@ -43,10 +45,8 @@ const ArticlePage: React.FC = () => {
           <Grid item xs={12} md={3}>
             <LeftBar
               showAuthor={false}
-              showFeatured={true}
               showCategories={true}
               showSocialLinks={false}
-              showTags={true}
               onCategoryChange={handleCategoryChange}
               categoriesWithCount={categoryCounts}
               posts={posts}

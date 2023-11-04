@@ -1,9 +1,7 @@
 import React from "react";
 import { Box, Paper } from "@mui/material";
 import AuthorSection from "../LeftBarComponents/AuthorSection";
-import FeaturedPost from "../LeftBarComponents/FeaturedPost";
 import SocialLink from "../LeftBarComponents/SocialLink";
-import Tag from "../LeftBarComponents/Tag";
 import Categories from "../LeftBarComponents/Categories";
 import "./LeftBar.scss";
 import { LeftBarProps, Post } from "../../types/types";
@@ -16,11 +14,9 @@ const LeftBar: React.FC<
   }
 > = ({
   showAuthor = true,
-  showFeatured = true,
   showCategories = true,
   onCategoryChange,
   showSocialLinks = true,
-  showTags = true,
   posts,
   categoriesWithCount,
 }) => {
@@ -40,16 +36,6 @@ const LeftBar: React.FC<
   return (
     <Box className="left-bar">
       {showAuthor && <AuthorSection />}
-      {showFeatured && (
-        <Box className="feat-left">
-          <Paper elevation={0} className="left-bar-blocks">
-            Featured posts
-          </Paper>
-          <FeaturedPost picClass="pic1" />
-          <FeaturedPost picClass="pic2" />
-          <FeaturedPost picClass="pic3" />
-        </Box>
-      )}
       {showCategories && (
         <Categories
           onCategoryChange={handleCategorySelect}
@@ -72,7 +58,6 @@ const LeftBar: React.FC<
           <SocialLink className="gplus" count={642} label="followers" />
         </Box>
       )}
-      {showTags && <Tag />}
     </Box>
   );
 };

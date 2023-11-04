@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { sortPostsByDate } from "../utils/postUtils";
 
 const usePagination = <
-  T extends { id: number; featured?: boolean; category?: string }
+  T extends { id: number; featured?: boolean; category?: string; date: string }
 >(
   data: T[],
   itemsPerPage: number,
@@ -12,8 +13,11 @@ const usePagination = <
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
-    // Filter the data
-    const filteredData = data.filter(filterCondition);
+    // Sort the data first
+    const sortedData = sortPostsByDate<T>(data); // Ensure sortPostsByDate accepts generic type T
+
+    // Then filter the sorted data
+    const filteredData = sortedData.filter(filterCondition);
 
     // Find the featured post only in the filtered data
     const featuredPost =
@@ -34,7 +38,7 @@ const usePagination = <
 
     // If there's a featured post on the first page, insert it at the specified index
     if (featuredPost && currentPage === 1) {
-      newPaginatedData.splice(4, 0, featuredPost);
+      newPaginatedData.splice(4, 0, featuredPost); // Ensure the index is correct for your use case
     }
 
     setPaginatedData(newPaginatedData);
