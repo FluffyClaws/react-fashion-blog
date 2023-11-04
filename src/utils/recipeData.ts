@@ -65,7 +65,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 8,
-    category: "Breakfast",
+    category: "Dessert",
     title: "Classic Belgian Waffles",
     author: "Kate Willems",
     date: "October 30, 2023",
@@ -137,7 +137,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 16,
-    category: "Bread",
+    category: "Dessert",
     title: "Artisan Sourdough Bread",
     author: "Kate Willems",
     date: "November 7, 2023",
@@ -173,7 +173,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 20,
-    category: "Seafood",
+    category: "Burger",
     title: "Pan-Seared Salmon with Dill Sauce",
     author: "Kate Willems",
     date: "November 11, 2023",
@@ -182,7 +182,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 21,
-    category: "Pasta",
+    category: "Pizza",
     title: "Spaghetti Aglio e Olio",
     author: "Kate Willems",
     date: "November 12, 2023",
@@ -191,7 +191,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 22,
-    category: "Breakfast",
+    category: "Burger",
     title: "Avocado Toast with Poached Egg",
     author: "Kate Willems",
     date: "November 13, 2023",
@@ -200,7 +200,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 23,
-    category: "Breakfast",
+    category: "Burger",
     title: "Buttermilk Pancakes",
     author: "Kate Willems",
     date: "November 14, 2023",
@@ -209,7 +209,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 24,
-    category: "Meat",
+    category: "Burger",
     title: "Herb-Crusted Rack of Lamb",
     author: "Kate Willems",
     date: "November 15, 2023",

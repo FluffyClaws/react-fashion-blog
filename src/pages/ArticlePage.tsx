@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { Grid, Container, Box } from "@mui/material";
@@ -7,27 +7,23 @@ import BottomMenu from "../components/Main/BottomMenu";
 import BottomSocial from "../components/Main/BottomSocial";
 import PageNavigation from "../components/Main/PageNavigation";
 import Posts from "../components/Main/Posts";
-import usePagination from "../utils/usePagination";
+import usePagination from "../hooks/usePagination";
 import { Post } from "../types/types";
 import { posts as postData, posts } from "../utils/postData";
-import {
-  createFilterCondition,
-  handleCategoryChange,
-} from "../utils/postUtils";
+
+import useCategoryFilter from "../hooks/useCategoryFilter";
 
 const ArticlePage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const postsPerPage = 10;
-
-  const filterCondition = createFilterCondition(selectedCategory);
+  const { handleCategoryChange, filteredItems, categoryCounts } =
+    useCategoryFilter<Post>(
+      "All",
+      ["All", "Tourism", "Sport", "Clothes", "Fashion"],
+      postData
+    );
 
   const { currentPage, setCurrentPage, totalPages, paginatedData } =
-    usePagination<Post>(postData, postsPerPage, filterCondition);
-
-  const onCategoryChange = handleCategoryChange(
-    setSelectedCategory,
-    setCurrentPage
-  );
+    usePagination<Post>(filteredItems, postsPerPage, () => true);
 
   return (
     <>
@@ -51,7 +47,8 @@ const ArticlePage: React.FC = () => {
               showCategories={true}
               showSocialLinks={false}
               showTags={true}
-              onCategoryChange={onCategoryChange}
+              onCategoryChange={handleCategoryChange}
+              categoriesWithCount={categoryCounts}
               posts={posts}
             />
           </Grid>

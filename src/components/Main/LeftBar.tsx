@@ -7,18 +7,35 @@ import Tag from "../LeftBarComponents/Tag";
 import Categories from "../LeftBarComponents/Categories";
 import "./LeftBar.scss";
 import { LeftBarProps, Post } from "../../types/types";
-import { getCategoryCounts } from "../../utils/postUtils";
+import useCategoryFilter from "../../hooks/useCategoryFilter";
 
-const LeftBar: React.FC<LeftBarProps & { posts: Post[] }> = ({
+const LeftBar: React.FC<
+  LeftBarProps & {
+    posts: Post[];
+    categoriesWithCount: { name: string; count: number }[];
+  }
+> = ({
   showAuthor = true,
   showFeatured = true,
   showCategories = true,
-  onCategoryChange = () => {},
+  onCategoryChange,
   showSocialLinks = true,
   showTags = true,
   posts,
+  categoriesWithCount,
 }) => {
-  const categoriesWithCount = getCategoryCounts(posts);
+  const { handleCategoryChange } = useCategoryFilter<Post>(
+    "All",
+    categoriesWithCount.map((c) => c.name),
+    posts
+  );
+
+  const handleCategorySelect = (category: string) => {
+    handleCategoryChange(category);
+    if (onCategoryChange) {
+      onCategoryChange(category);
+    }
+  };
 
   return (
     <Box className="left-bar">
@@ -35,7 +52,7 @@ const LeftBar: React.FC<LeftBarProps & { posts: Post[] }> = ({
       )}
       {showCategories && (
         <Categories
-          onCategoryChange={onCategoryChange}
+          onCategoryChange={handleCategorySelect}
           categoriesWithCount={categoriesWithCount}
         />
       )}

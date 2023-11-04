@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { Container, Grid } from "@mui/material";
@@ -11,32 +11,20 @@ import PageNavigation from "../components/Main/PageNavigation";
 import Posts from "../components/Main/Posts";
 import { Post } from "../types/types";
 import { posts as postData, posts } from "../utils/postData";
-import usePagination from "../utils/usePagination";
-import {
-  createFilterCondition,
-  handleCategoryChange,
-} from "../utils/postUtils";
+import usePagination from "../hooks/usePagination";
+import useCategoryFilter from "../hooks/useCategoryFilter";
 
 const HomePage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const postsPerPage = 10;
-
-  const filterCondition = createFilterCondition(selectedCategory);
+  const { handleCategoryChange, filteredItems, categoryCounts } =
+    useCategoryFilter<Post>(
+      "All",
+      ["All", "Tourism", "Sport", "Clothes", "Fashion"],
+      postData
+    );
 
   const { currentPage, setCurrentPage, totalPages, paginatedData } =
-    usePagination<Post>(postData, postsPerPage, filterCondition);
-
-  const onCategoryChange = handleCategoryChange(
-    setSelectedCategory,
-    setCurrentPage
-  );
-
-  const filteredPosts = paginatedData.filter((post) => {
-    return (
-      selectedCategory === "All" ||
-      post.category.toUpperCase() === selectedCategory.toUpperCase()
-    );
-  });
+    usePagination<Post>(filteredItems, postsPerPage, () => true);
 
   return (
     <>
@@ -45,7 +33,7 @@ const HomePage: React.FC = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12} md={9}>
-            <Posts posts={filteredPosts} />
+            <Posts posts={paginatedData} />
             <PageNavigation
               currentPage={currentPage}
               totalPages={totalPages}
@@ -53,7 +41,11 @@ const HomePage: React.FC = () => {
             />
           </Grid>
           <Grid item xs={12} md={3}>
-            <LeftBar onCategoryChange={onCategoryChange} posts={posts} />
+            <LeftBar
+              onCategoryChange={handleCategoryChange}
+              posts={posts}
+              categoriesWithCount={categoryCounts}
+            />
           </Grid>
         </Grid>
       </Container>

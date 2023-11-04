@@ -12,7 +12,7 @@ const usePagination = <
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
-    // First, filter the data according to the provided filter condition
+    // Filter the data
     const filteredData = data.filter(filterCondition);
 
     // Find the featured post only in the filtered data

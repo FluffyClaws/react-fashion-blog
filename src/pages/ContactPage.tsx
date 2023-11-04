@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import {
@@ -87,6 +86,7 @@ const ContactPage = () => {
               showSocialLinks={true}
               showTags={false}
               posts={posts}
+              categoriesWithCount={[]}
             />
           </Grid>
         </Grid>
