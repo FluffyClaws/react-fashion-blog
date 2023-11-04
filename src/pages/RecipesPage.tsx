@@ -36,8 +36,8 @@ const RecipesPage: React.FC = () => {
             <LeftBar
               showAuthor={true}
               showFeatured={false}
-              showCategories={false}
-              showSocialLinks={true}
+              showCategories={true}
+              showSocialLinks={false}
               showTags={false}
               posts={posts}
             />
