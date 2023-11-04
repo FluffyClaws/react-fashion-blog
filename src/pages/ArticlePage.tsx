@@ -7,14 +7,25 @@ import BottomMenu from "../components/Main/BottomMenu";
 import BottomSocial from "../components/Main/BottomSocial";
 import PageNavigation from "../components/Main/PageNavigation";
 import Posts from "../components/Main/Posts";
-import usePagination from "../utils/usePagination";
+import usePagination from "../hooks/usePagination";
 import { Post } from "../types/types";
-import { posts as postData } from "../utils/postData";
+import { posts as postData, posts } from "../utils/postData";
+
+import useCategoryFilter from "../hooks/useCategoryFilter";
 
 const ArticlePage: React.FC = () => {
   const postsPerPage = 10;
+
+  const allCategories = [
+    "All",
+    ...Array.from(new Set(postData.map((post) => post.category))),
+  ];
+
+  const { handleCategoryChange, filteredItems, categoryCounts } =
+    useCategoryFilter<Post>("All", allCategories, postData);
+
   const { currentPage, setCurrentPage, totalPages, paginatedData } =
-    usePagination<Post>(postData, postsPerPage);
+    usePagination<Post>(filteredItems, postsPerPage, () => true);
 
   return (
     <>
@@ -34,10 +45,11 @@ const ArticlePage: React.FC = () => {
           <Grid item xs={12} md={3}>
             <LeftBar
               showAuthor={false}
-              showFeatured={true}
               showCategories={true}
               showSocialLinks={false}
-              showTags={true}
+              onCategoryChange={handleCategoryChange}
+              categoriesWithCount={categoryCounts}
+              posts={posts}
             />
           </Grid>
         </Grid>

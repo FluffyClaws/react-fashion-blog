@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import {
@@ -13,6 +12,7 @@ import LeftBar from "../components/Main/LeftBar";
 import BottomMenu from "../components/Main/BottomMenu";
 import BottomSocial from "../components/Main/BottomSocial";
 import "./ContactPage.scss";
+import { posts } from "../utils/postData";
 
 const ContactPage = () => {
   return (
@@ -81,10 +81,10 @@ const ContactPage = () => {
           <Grid item xs={12} md={3}>
             <LeftBar
               showAuthor={true}
-              showFeatured={false}
               showCategories={false}
               showSocialLinks={true}
-              showTags={false}
+              posts={posts}
+              categoriesWithCount={[]}
             />
           </Grid>
         </Grid>

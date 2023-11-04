@@ -3,7 +3,7 @@ import { Recipe } from "../types/types";
 export const recipes: Recipe[] = [
   {
     id: 1,
-    category: "Vegetarian",
+    category: "Pizza",
     title: "Delicious Vegetarian Pizza",
     author: "Kate Willems",
     date: "October 26, 2023",
@@ -12,7 +12,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 2,
-    category: "Meat",
+    category: "Pizza",
     title: "Savory Meat Pizza",
     author: "Kate Willems",
     date: "October 26, 2023",
@@ -29,7 +29,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 4,
-    category: "Vegetarian",
+    category: "Salad",
     title: "Zesty Vegetarian Taco Salad",
     author: "Kate Willems",
     date: "October 26, 2023",
@@ -47,7 +47,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 6,
-    category: "Seafood",
+    category: "Burger",
     title: "Garlic Butter Shrimp Pasta",
     author: "Kate Willems",
     date: "October 28, 2023",
@@ -56,7 +56,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 7,
-    category: "Vegan",
+    category: "Burger",
     title: "Ultimate Vegan Burger",
     author: "Kate Willems",
     date: "October 29, 2023",
@@ -65,7 +65,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 8,
-    category: "Breakfast",
+    category: "Dessert",
     title: "Classic Belgian Waffles",
     author: "Kate Willems",
     date: "October 30, 2023",
@@ -74,7 +74,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 9,
-    category: "Healthy",
+    category: "Salad",
     title: "Kale and Quinoa Salad",
     author: "Kate Willems",
     date: "October 31, 2023",
@@ -83,7 +83,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 10,
-    category: "Snack",
+    category: "Salad",
     title: "Homemade Soft Pretzels",
     author: "Kate Willems",
     date: "November 1, 2023",
@@ -92,7 +92,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 11,
-    category: "Pasta",
+    category: "Pizza",
     title: "Creamy Alfredo Fettuccine",
     author: "Kate Willems",
     date: "November 2, 2023",
@@ -101,7 +101,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 12,
-    category: "Grill",
+    category: "Burger",
     title: "BBQ Chicken Skewers",
     author: "Kate Willems",
     date: "November 3, 2023",
@@ -119,7 +119,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 14,
-    category: "Appetizer",
+    category: "Pizza",
     title: "Stuffed Mushrooms",
     author: "Kate Willems",
     date: "November 5, 2023",
@@ -128,7 +128,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 15,
-    category: "Beverage",
+    category: "Dessert",
     title: "Classic Mojito Cocktail",
     author: "Kate Willems",
     date: "November 6, 2023",
@@ -137,7 +137,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 16,
-    category: "Bakery",
+    category: "Dessert",
     title: "Artisan Sourdough Bread",
     author: "Kate Willems",
     date: "November 7, 2023",
@@ -155,7 +155,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 18,
-    category: "Vegan",
+    category: "Dessert",
     title: "Vegan Chocolate Brownies",
     author: "Kate Willems",
     date: "November 9, 2023",
@@ -173,7 +173,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 20,
-    category: "Fish",
+    category: "Burger",
     title: "Pan-Seared Salmon with Dill Sauce",
     author: "Kate Willems",
     date: "November 11, 2023",
@@ -182,7 +182,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 21,
-    category: "Pasta",
+    category: "Pizza",
     title: "Spaghetti Aglio e Olio",
     author: "Kate Willems",
     date: "November 12, 2023",
@@ -191,7 +191,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 22,
-    category: "Healthy",
+    category: "Burger",
     title: "Avocado Toast with Poached Egg",
     author: "Kate Willems",
     date: "November 13, 2023",
@@ -200,7 +200,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 23,
-    category: "Breakfast",
+    category: "Burger",
     title: "Buttermilk Pancakes",
     author: "Kate Willems",
     date: "November 14, 2023",
@@ -209,7 +209,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 24,
-    category: "Meat",
+    category: "Burger",
     title: "Herb-Crusted Rack of Lamb",
     author: "Kate Willems",
     date: "November 15, 2023",
@@ -218,7 +218,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 25,
-    category: "Vegetarian",
+    category: "Burger",
     title: "Stuffed Bell Peppers",
     author: "Kate Willems",
     date: "November 16, 2023",

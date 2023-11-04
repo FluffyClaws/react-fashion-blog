@@ -2,15 +2,17 @@
 @import "../../styles/mixins";
 
 .recipe-post {
-  width: 370px;
+  width: 45%;
   margin-bottom: $spacing-large;
+  display: flex;
+  flex-direction: column;
 
   .recipe-post-info {
+    flex-grow: 1;
     padding: 25px 30px;
     background-color: $white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
   }
 
   .post-cat {
@@ -44,5 +46,7 @@
   .recipe-post-main-cont {
     @include font-pt-sans;
     padding: $spacing-medium $spacing-large 0 0;
+    flex-grow: 1;
+    overflow: hidden;
   }
 }

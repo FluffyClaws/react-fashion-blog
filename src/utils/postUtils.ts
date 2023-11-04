@@ -1,6 +1,8 @@
 import { Post } from "../types/types";
 
-export const sortPostsByDate = (posts: Post[]): Post[] => {
+export const sortPostsByDate = <T extends { date: string }>(
+  posts: T[]
+): T[] => {
   return [...posts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
