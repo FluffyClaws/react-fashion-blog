@@ -1,15 +1,17 @@
 import React from "react";
-import { Box, Typography, Link, Paper } from "@mui/material";
+import { Box, Typography, Paper } from "@mui/material";
+import { Link } from "react-router-dom";
 import "./PostItem.scss";
 import { Post } from "../../types/types";
 
 const PostItem: React.FC<Post & { isFeatured: boolean }> = ({
+  id,
   imageUrl,
   category,
   title,
   author,
   date,
-  content,
+  preview,
   isFeatured,
 }) => (
   <Paper elevation={3} className={` ${isFeatured ? "feat-post" : "post"}`}>
@@ -21,30 +23,25 @@ const PostItem: React.FC<Post & { isFeatured: boolean }> = ({
       <Typography className={`${isFeatured ? "feat-post-cat" : "post-cat"}`}>
         {category}
       </Typography>
-      <Typography
+
+      <Link
+        to={`/content/post/${id}`}
         className={`${isFeatured ? "feat-main-head" : "post-head"}`}
-        component={Link}
-        href="#"
       >
         {title}
-      </Typography>
+      </Link>
+
       <Box
         className={`${
           isFeatured ? "feat-main-addinfo-wrapper" : "addinfo-wrapper"
         }`}
       >
-        <Typography component={Link} href="#">
-          {author}
-        </Typography>
+        <Typography>{author}</Typography>
         <Typography>{date}</Typography>
-        {isFeatured && (
-          <Typography component={Link} href="#">
-            4 comments
-          </Typography>
-        )}
       </Box>
-      {isFeatured && content && (
-        <Typography className="feat-post-content">{content}</Typography>
+
+      {isFeatured && preview && (
+        <Typography className="feat-post-content">{preview}</Typography>
       )}
     </Box>
   </Paper>

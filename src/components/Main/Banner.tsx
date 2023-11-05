@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import { posts } from "../../utils/postData";
 import "./Banner.scss";
 
@@ -8,7 +9,7 @@ const Banner: React.FC = () => {
   if (!bannerPost) {
     return null;
   }
-  const { category, title, author, date } = bannerPost;
+  const { category, title, author, date, id } = bannerPost;
 
   return (
     <Box className="bigB">
@@ -16,15 +17,13 @@ const Banner: React.FC = () => {
       <Box className="container">
         <Box className="col-12">
           <Box className="bigB-text">
-            <Link href="#" className="cat">
-              {category}
-            </Link>
-            <Link href="#" className="headline">
+            <Typography className="cat">{category}</Typography>
+            <Link to={`/content/post/${id}`} className="headline">
               {title}
             </Link>
             <Box className="bigB-wrapper">
               <Typography>{date}</Typography>
-              <Link href="#">{author}</Link>
+              <Typography>{author}</Typography>
             </Box>
           </Box>
         </Box>

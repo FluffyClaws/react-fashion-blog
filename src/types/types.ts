@@ -4,16 +4,15 @@ export type CategorizedItem = {
   title: string;
   author: string;
   date: string;
+  preview?: string;
+  content?: string;
 };
 
-export type Recipe = CategorizedItem & {
-  content: string;
-};
+export type Recipe = CategorizedItem & {};
 
 export type Post = CategorizedItem & {
   imageUrl: string;
   featured?: boolean;
-  content?: string;
   banner?: boolean;
 };
 export type LeftBarProps = {
@@ -29,4 +28,14 @@ export type PageNavigationProps = {
 };
 export type PostListProps = {
   posts: Post[];
+};
+export type Comment = {
+  name: string;
+  content: string;
+};
+export type CommentsSectionProps = {
+  comments: Comment[];
+};
+export type CommentFormProps = {
+  onAddComment: (comment: Comment) => void;
 };

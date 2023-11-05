@@ -37,6 +37,9 @@ html .post {
 
   &-head {
     padding: 0 $spacing-xlarge $spacing-small $spacing-xlarge;
+    &:hover {
+      color: $color-secondary;
+    }
   }
 }
 
@@ -88,6 +91,9 @@ html .feat-main-head {
   text-align: center;
   text-decoration: none;
   padding: $spacing-small 0 $spacing-medium;
+  &:hover {
+    color: $color-secondary;
+  }
 }
 
 html .feat-post-cat {

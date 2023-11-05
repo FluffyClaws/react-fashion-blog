@@ -1,0 +1,43 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+html .comment-form {
+  margin-top: $spacing-large;
+  width: 100%;
+}
+
+html .comment-input,
+html .comment-textarea {
+  width: 100%;
+  margin-bottom: $spacing-medium;
+  padding: $spacing-small;
+  box-sizing: border-box;
+
+  &::placeholder {
+    @include font-pt-serif(400, 14px, 18px);
+    color: $color-tertiary;
+  }
+
+  & .MuiOutlinedInput-root {
+    &.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-color: $color-secondary;
+    }
+  }
+  & .MuiInputLabel-root.Mui-focused {
+    color: $color-secondary;
+  }
+}
+
+html .comment-submit-button {
+  @include font-pt-serif(700, 14px, 18px);
+  background-color: $color-secondary;
+  color: $white;
+  padding: $spacing-small $spacing-large;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-secondary, 10%);
+  }
+}
