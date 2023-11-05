@@ -38,7 +38,6 @@ const PostItem: React.FC<Post & { isFeatured: boolean }> = ({
       >
         <Typography>{author}</Typography>
         <Typography>{date}</Typography>
-        {isFeatured && <Typography>4 comments</Typography>}
       </Box>
 
       {isFeatured && preview && (

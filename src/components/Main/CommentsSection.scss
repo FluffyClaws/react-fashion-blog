@@ -1,16 +1,18 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
-.comments-container {
+html .comments-container {
   width: 100%;
   @include flex-column-start;
   background-color: $color-background-white;
   padding: $spacing-medium;
-  margin-top: $spacing-large;
   border-radius: 4px;
+  span {
+    @include font-pt-serif(700, 25px, 20px);
+  }
 }
 
-.comment-item {
+html .comment-item {
   width: 100%;
   border-bottom: 1px solid $border-color;
   padding: $spacing-small 0;
@@ -30,45 +32,4 @@ html .comment-content {
   @include font-pt-serif(400, 14px, 18px);
   color: $color-primary;
   margin-top: $spacing-small;
-}
-
-html .comment-form {
-  margin-top: $spacing-large;
-  width: 100%;
-}
-
-html .comment-input,
-html .comment-textarea {
-  width: 100%;
-  margin-bottom: $spacing-medium;
-  padding: $spacing-small;
-  box-sizing: border-box;
-
-  &::placeholder {
-    @include font-pt-serif(400, 14px, 18px);
-    color: $color-tertiary;
-  }
-
-  & .MuiOutlinedInput-root {
-    &.Mui-focused .MuiOutlinedInput-notchedOutline {
-      border-color: $color-secondary;
-    }
-  }
-  & .MuiInputLabel-root.Mui-focused {
-    color: $color-secondary;
-  }
-}
-
-html .comment-submit-button {
-  @include font-pt-serif(700, 14px, 18px);
-  background-color: $color-secondary;
-  color: $white;
-  padding: $spacing-small $spacing-large;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: darken($color-secondary, 10%);
-  }
 }

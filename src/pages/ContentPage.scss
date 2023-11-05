@@ -2,12 +2,12 @@
 @import "../styles/mixins";
 @import "../styles/base";
 
-.content-container {
+html .content-container {
   background-color: $color-background-white;
   padding: $spacing-large 0;
 }
 
-.content-page {
+html .content-page {
   margin-top: $spacing-xlarge;
   @extend %flex-column-center;
   @extend %box-shadow;
@@ -16,12 +16,12 @@
   margin-bottom: $spacing-large;
 }
 
-.content-title {
+html .content-title {
   @include font-pt-serif(700, 24px, 32px);
   margin-bottom: $spacing-medium;
 }
 
-.content-description {
+html .content-description {
   @include font-pt-serif(400, 16px, 24px);
   color: $color-tertiary;
 }

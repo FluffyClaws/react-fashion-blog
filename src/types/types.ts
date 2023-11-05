@@ -36,3 +36,6 @@ export type Comment = {
 export type CommentsSectionProps = {
   comments: Comment[];
 };
+export type CommentFormProps = {
+  onAddComment: (comment: Comment) => void;
+};

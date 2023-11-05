@@ -23,7 +23,6 @@ const RecipePost: React.FC<Recipe> = ({
         <Box className="recipe-main-addinfo-wrapper">
           <Typography>{date}</Typography>
           <Typography>{author}</Typography>
-          <Typography>4 comments</Typography>
         </Box>
       </Box>
     </Paper>
