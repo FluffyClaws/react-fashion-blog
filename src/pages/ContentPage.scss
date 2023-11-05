@@ -1,0 +1,27 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+@import "../styles/base";
+
+.content-container {
+  background-color: $color-background-white;
+  padding: $spacing-large 0;
+}
+
+.content-page {
+  margin-top: $spacing-xlarge;
+  @extend %flex-column-center;
+  @extend %box-shadow;
+  padding: $spacing-medium;
+  background-color: $white;
+  margin-bottom: $spacing-large;
+}
+
+.content-title {
+  @include font-pt-serif(700, 24px, 32px);
+  margin-bottom: $spacing-medium;
+}
+
+.content-description {
+  @include font-pt-serif(400, 16px, 24px);
+  color: $color-tertiary;
+}

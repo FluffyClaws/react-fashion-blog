@@ -4,16 +4,15 @@ export type CategorizedItem = {
   title: string;
   author: string;
   date: string;
+  preview?: string;
+  content?: string;
 };
 
-export type Recipe = CategorizedItem & {
-  content: string;
-};
+export type Recipe = CategorizedItem & {};
 
 export type Post = CategorizedItem & {
   imageUrl: string;
   featured?: boolean;
-  content?: string;
   banner?: boolean;
 };
 export type LeftBarProps = {

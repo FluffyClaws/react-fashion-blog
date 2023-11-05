@@ -7,6 +7,13 @@
   display: flex;
   flex-direction: column;
 
+  a {
+    @include font-pt-serif(400, 20px, 28px);
+    color: $color-primary;
+    margin-top: $spacing-small;
+    text-decoration: none;
+  }
+
   .recipe-post-info {
     flex-grow: 1;
     padding: 25px 30px;
@@ -24,10 +31,10 @@
 
   .recipe-main-head {
     @include font-pt-serif(400, 20px, 28px);
-    color: $color-primary;
-    margin-top: $spacing-small;
-    text-decoration: none;
     text-align: left;
+    &:hover {
+      color: $color-secondary;
+    }
   }
 
   .recipe-main-addinfo-wrapper {
