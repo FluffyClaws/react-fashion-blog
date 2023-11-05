@@ -29,3 +29,10 @@ export type PageNavigationProps = {
 export type PostListProps = {
   posts: Post[];
 };
+export type Comment = {
+  name: string;
+  content: string;
+};
+export type CommentsSectionProps = {
+  comments: Comment[];
+};
