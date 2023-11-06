@@ -6,12 +6,12 @@ import LeftBar from "../components/Main/LeftBar";
 import BottomMenu from "../components/Main/BottomMenu";
 import BottomSocial from "../components/Main/BottomSocial";
 import PageNavigation from "../components/Main/PageNavigation";
-import Posts from "../components/Main/Posts";
 import usePagination from "../hooks/usePagination";
 import { Post } from "../types/types";
 import { posts as postData, posts } from "../utils/postData";
 
 import useCategoryFilter from "../hooks/useCategoryFilter";
+import PostList from "../components/PostList/PostList";
 
 const ArticlePage: React.FC = () => {
   const postsPerPage = 10;
@@ -34,7 +34,7 @@ const ArticlePage: React.FC = () => {
         <Grid container spacing={4}>
           <Grid item xs={12} md={9}>
             <Box className="articles-content">
-              <Posts posts={paginatedData} />
+              <PostList posts={paginatedData} />
             </Box>
             <PageNavigation
               currentPage={currentPage}

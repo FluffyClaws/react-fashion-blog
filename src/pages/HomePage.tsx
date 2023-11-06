@@ -8,11 +8,11 @@ import BottomSocial from "../components/Main/BottomSocial";
 import InstagramSection from "../components/Main/InstagramSection";
 import LeftBar from "../components/Main/LeftBar";
 import PageNavigation from "../components/Main/PageNavigation";
-import Posts from "../components/Main/Posts";
 import { Post } from "../types/types";
 import { posts as postData, posts } from "../utils/postData";
 import usePagination from "../hooks/usePagination";
 import useCategoryFilter from "../hooks/useCategoryFilter";
+import PostList from "../components/PostList/PostList";
 
 const HomePage: React.FC = () => {
   const postsPerPage = 10;
@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12} md={9}>
-            <Posts posts={paginatedData} />
+            <PostList posts={paginatedData} />
             <PageNavigation
               currentPage={currentPage}
               totalPages={totalPages}
