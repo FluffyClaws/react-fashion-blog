@@ -1,21 +1,48 @@
 @import "../../styles/base";
+@import "../../styles/variables";
 
 .header {
   max-width: 1920px;
   height: 100px;
   background-color: $color-background-white;
+  @media (max-width: $breakpoint-tablet) {
+    height: 80px;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    height: 60px;
+  }
 }
 
 .header-container {
   width: 95%;
   margin: 0 auto;
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
 }
 
 .row {
   margin: 0 -$spacing-small;
   max-width: calc(100% - #{$spacing-small * 2});
+  @media (max-width: $breakpoint-tablet) {
+    margin: 0;
+    justify-content: space-between;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0;
+    justify-content: space-between;
+  }
 }
 
 [class*="col-"] {
   padding-left: $spacing-small;
+  @media (max-width: $breakpoint-tablet) {
+    padding-left: 0;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    padding-left: 0;
+  }
 }

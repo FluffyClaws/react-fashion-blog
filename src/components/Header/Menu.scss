@@ -1,13 +1,59 @@
 @import "../../styles/base";
+@import "../../styles/variables";
 
 .menu {
-  @include flex-space-evenly;
-  max-width: 369px;
-  max-height: 18px;
+  @include flex-row-center;
+  justify-content: space-between;
+  position: relative;
 
-  a {
-    @include font-pt-serif(400, 14px);
-    padding: $spacing-small $spacing-medium;
-    @include text-link;
+  .menu-icon {
+    display: none;
+    @media (max-width: $breakpoint-tablet) {
+      display: block;
+      position: relative;
+      top: 23px;
+      transform: translateY(-50%);
+      z-index: 3;
+    }
+  }
+
+  .menu-items {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 369px;
+    max-height: 18px;
+    transition: transform 0.3s ease-in-out;
+
+    @media (max-width: $breakpoint-tablet) {
+      position: fixed;
+      top: 60px;
+      right: 10px;
+      background-color: $color-background-white;
+      flex-direction: column;
+      width: 100%;
+      transform: translateX(100%);
+      align-items: center;
+      z-index: 2;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      max-height: calc(100vh - #{80px});
+    }
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    a {
+      @include font-pt-serif(400, 14px);
+      padding: $spacing-small $spacing-medium;
+      @include text-link;
+
+      @media (max-width: $breakpoint-tablet) {
+        padding: $spacing-medium;
+        text-align: center;
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid $border-color;
+      }
+    }
   }
 }

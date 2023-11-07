@@ -9,6 +9,7 @@ import ContentPage from "./pages/ContentPage";
 
 const App: React.FC = () => {
   return (
+    // <BrowserRouter basename="/react-fashion-blog">
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />

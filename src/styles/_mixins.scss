@@ -3,16 +3,19 @@
   align-items: center;
   justify-content: center;
 }
+
 @mixin flex-column-center {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 @mixin flex-space-evenly {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
+
 @mixin flex-row-center {
   display: flex;
   flex-direction: row;
@@ -30,6 +33,11 @@
   font-weight: $weight;
   font-size: $size;
   line-height: $line-height;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $size * 0.85; // Slightly smaller font for mobile
+    line-height: $line-height * 0.85;
+  }
 }
 
 @mixin font-pt-sans($weight: 400, $size: 14px, $line-height: 24px) {
@@ -37,6 +45,11 @@
   font-weight: $weight;
   font-size: $size;
   line-height: $line-height;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $size * 0.85; // Slightly smaller font for mobile
+    line-height: $line-height * 0.85;
+  }
 }
 
 @mixin text-link {
@@ -45,5 +58,14 @@
 
   &:hover {
     color: $color-link-hover;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    &:hover {
+      color: darken(
+        $color-link-hover,
+        10%
+      ); // Darker hover color for better visibility on mobile
+    }
   }
 }

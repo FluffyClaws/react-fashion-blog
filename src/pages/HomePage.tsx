@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Header />
-      <Banner />
+      {/* <Banner />
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12} md={9}>
@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
       <InstagramSection />
       <BottomMenu />
       <BottomSocial />
-      <Footer />
+      <Footer /> */}
     </>
   );
 };

@@ -5,11 +5,23 @@
   @include font-pt-serif;
   color: $color-primary;
   text-decoration: none;
+
+  @media (max-width: $breakpoint-mobile) {
+    @include font-pt-serif($weight: 400, $size: 12px, $line-height: 16px);
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    @include font-pt-serif($weight: 400, $size: 13px, $line-height: 17px);
+  }
 }
 
 %flex-row-center {
   @include flex-center;
   flex-direction: row;
+
+  @media (max-width: $breakpoint-mobile) {
+    @include flex-column-center;
+  }
 }
 
 %flex-column-center {
@@ -24,4 +36,8 @@
 body {
   font-family: $font-primary;
   color: $color-primary;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+  }
 }

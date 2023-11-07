@@ -1,21 +1,50 @@
 @import "../../styles/base";
+@import "../../styles/variables";
 
 .logo {
   height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   a {
     @include font-pt-serif(700, 25px, 32px);
-    width: 126px;
     letter-spacing: 2.5px;
     @include text-link;
+    text-align: center;
+    display: block;
   }
-}
 
-.rectangle {
-  width: 125px;
-  height: 6px;
-  opacity: 0.35;
-  background-color: $color-secondary;
-  position: relative;
-  margin-top: -$spacing-small;
+  .rectangle {
+    width: 125px;
+    height: 6px;
+    opacity: 0.35;
+    background-color: $color-secondary;
+    position: relative;
+    margin-top: -$spacing-small;
+  }
+
+  // Adjustments for tablet
+  @media (max-width: $breakpoint-tablet) {
+    a {
+      font-size: 20px;
+      width: auto;
+    }
+
+    .rectangle {
+      width: 100px;
+    }
+  }
+
+  // Adjustments for mobile
+  @media (max-width: $breakpoint-mobile) {
+    a {
+      font-size: 18px;
+      width: auto;
+    }
+
+    .rectangle {
+      width: 100px;
+    }
+  }
 }
