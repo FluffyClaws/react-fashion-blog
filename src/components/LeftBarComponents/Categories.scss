@@ -2,8 +2,17 @@
 @import "../../styles/mixins.scss";
 
 .categories {
+  width: inherit;
   @include flex-column-start;
   padding-top: $spacing-large;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: $spacing-medium;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: $spacing-small;
+  }
 
   a {
     width: 100%;
@@ -13,16 +22,30 @@
     justify-content: space-between;
     padding: $spacing-medium 0;
     border-bottom: 1px solid $border-color;
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: $spacing-small 0;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: $spacing-small 0;
+    }
+
     &:hover {
       color: $color-secondary;
     }
+
     &:last-child {
       border: none;
       margin-bottom: $spacing-xlarge;
-    }
-  }
 
-  span {
-    @include flex-row-center;
+      @media (max-width: $breakpoint-tablet) {
+        margin-bottom: $spacing-medium;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        margin-bottom: $spacing-small;
+      }
+    }
   }
 }

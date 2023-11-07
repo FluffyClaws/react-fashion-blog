@@ -2,18 +2,44 @@
 @import "../../styles/mixins.scss";
 
 html .left-bar {
+  justify-content: center;
   @include flex-column-center;
   padding-top: $spacing-xlarge;
+  width: 100%;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: $spacing-large;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: $spacing-medium;
+  }
 
   &-blocks {
     padding: $spacing-medium 0;
     @include font-pt-serif;
     color: $color-primary;
-    width: 270px;
-    height: 50px;
+    width: 100%;
+    height: auto;
     border: 1px solid $border-color;
     background-color: $color-background-white;
     text-align: center;
+    align-self: center;
     margin-bottom: $spacing-large;
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: $spacing-small 0;
+      margin-bottom: $spacing-medium;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: $spacing-small 0;
+      margin-bottom: $spacing-small;
+    }
+  }
+  @media (max-width: $breakpoint-mobile) {
+    .social-links {
+      display: none;
+    }
   }
 }

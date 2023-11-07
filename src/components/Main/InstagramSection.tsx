@@ -5,26 +5,28 @@ import "react-multi-carousel/lib/styles.css";
 import "./InstagramSection.scss";
 
 const InstagramSection: React.FC = () => {
-  const images = Array(6)
-    .fill(0)
-    .map((_, index) => `/images/photo${index + 1}.png`);
+  const totalImages = 6;
+  const images = Array.from({ length: totalImages }, (_, index) => {
+    const imageNumber = (index % totalImages) + 1;
+    return `/images/photo${imageNumber}.png`;
+  });
 
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 4,
+      items: 5,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      items: 6,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 4,
+      items: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 4,
+      items: 1,
     },
   };
 
@@ -45,7 +47,7 @@ const InstagramSection: React.FC = () => {
       >
         {images.map((image, index) => (
           <Box key={index} className="instagram-image">
-            <img src={image} alt={`Instagram Image ${index + 1}`} />
+            <img src={image} alt="" />
           </Box>
         ))}
       </Carousel>

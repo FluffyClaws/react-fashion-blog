@@ -5,4 +5,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: $spacing-large;
+  justify-content: center;
+
+  @media (max-width: $breakpoint-tablet), (max-width: $breakpoint-mobile) {
+    gap: $spacing-medium;
+  }
 }
