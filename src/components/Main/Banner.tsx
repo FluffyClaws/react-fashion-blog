@@ -22,8 +22,8 @@ const Banner: React.FC = () => {
               {title}
             </Link>
             <Box className="bigB-wrapper">
-              <Typography component="span">{date}</Typography>
-              <Typography component="span">{author}</Typography>
+              <Typography>{date}</Typography>
+              <Typography>{author}</Typography>
             </Box>
           </Box>
         </Box>

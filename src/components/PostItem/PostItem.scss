@@ -41,25 +41,6 @@ html .post {
       color: $color-secondary;
     }
   }
-  // Responsive styles for tablet
-  @media (max-width: $breakpoint-tablet) {
-    &-info {
-      height: auto; // Adjust the height to fit content
-    }
-  }
-
-  // Responsive styles for mobile
-  @media (max-width: $breakpoint-mobile) {
-    &-image {
-      width: 100%; // Full width for mobile
-      height: auto; // Adjust the height to maintain aspect ratio
-    }
-
-    &-info {
-      width: 360px; // Full width for mobile
-      height: auto; // Adjust the height to fit content
-    }
-  }
 }
 
 html .addinfo-wrapper,
@@ -79,13 +60,8 @@ html .feat-main-addinfo-wrapper {
   p {
     @include font-pt-serif;
     font-size: 12px;
+
     padding-bottom: $spacing-medium;
-  }
-  @media (max-width: $breakpoint-tablet), (max-width: $breakpoint-mobile) {
-    p {
-      padding-bottom: $spacing-small;
-    }
-    order: 1;
   }
 }
 
@@ -97,50 +73,15 @@ html .feat-post {
 
   &-info {
     width: 770px;
-    height: auto;
+    height: 212px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: $spacing-small $spacing-medium $spacing-medium;
+    padding: $spacing-small $spacing-medium;
   }
 
-  &-preview {
+  &-content {
     @include font-pt-sans;
-  }
-  @media (max-width: $breakpoint-tablet) {
-    &-main-image {
-      max-width: 370px; // height: auto; // Adjust the height to maintain aspect ratio
-      max-height: 200px; // Example max-height, adjust as needed
-      background-size: cover;
-    }
-    &-info {
-      width: 370px; // Full width for tablet and mobile
-      height: auto; // Adjust the height to fit content
-      align-items: center;
-    }
-    &-preview {
-      padding-bottom: $spacing-small;
-      text-align: center;
-    }
-  }
-
-  // Responsive styles for tablet and mobile
-  @media (max-width: $breakpoint-mobile) {
-    &-main-image {
-      width: 0; // Full width for tablet and mobile
-      height: 0; // Adjust the height to maintain aspect ratio
-    }
-
-    &-info {
-      width: 360px; // Full width for tablet and mobile
-      height: auto; // Adjust the height to fit content
-      align-items: center;
-    }
-    &-preview {
-      width: auto;
-      padding-bottom: $spacing-small;
-      text-align: center;
-    }
   }
 }
 

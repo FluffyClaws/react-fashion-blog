@@ -7,25 +7,10 @@
 
   .page-nav-box {
     @include flex-space-evenly;
-    width: 509px; // This is the default width for larger screens
+    width: 509px;
     height: 50px;
     border: 1px solid $border-color;
     background-color: $white;
-
-    // Use a media query for tablet devices
-    @media (max-width: $breakpoint-tablet) {
-      width: 100%; // Make the navigation bar full width on smaller screens
-      padding: 0 $spacing-small; // Add some padding on the sides
-    }
-
-    // Use a media query for mobile devices
-    @media (max-width: $breakpoint-mobile) {
-      width: 100%; // Make the navigation bar full width on smaller screens
-      .page-nav-button {
-        font-size: 12px; // Reduce the font size for smaller screens
-        padding: 0 $spacing-small; // Reduce padding for buttons
-      }
-    }
 
     Button {
       @include font-pt-serif;
@@ -43,6 +28,20 @@
       }
     }
 
-    // ... other styles ...
+    .prev-page,
+    .next-page {
+      @include font-pt-serif(400, 14px, 16px);
+      color: $color-tertiary;
+      background-position: 0 2px;
+      padding: 0 $spacing-small;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+
+    .arrow-next {
+      transform: rotate(180deg);
+    }
   }
 }

@@ -4,59 +4,34 @@
 .bottom-menu-wrapper {
   @include flex-center;
   margin-bottom: $spacing-large;
-
-  @media (max-width: $breakpoint-tablet) {
-    padding: 0 $spacing-medium; // Add padding on smaller screens
-  }
 }
 
 .bottom-menu {
   @include flex-space-evenly;
-  width: 100%; // Use 100% width to allow inner content to dictate space
-  max-width: 352px; // Max width to maintain design on larger screens
-  height: auto; // Height auto for flexibility
+  width: 352px;
+  height: 18px;
 
   a {
     @include font-pt-serif(400, 14px, 18px);
     @include text-link;
     padding: 8px $spacing-medium;
-    white-space: nowrap; // Prevent menu items from wrapping
-
-    @media (max-width: $breakpoint-tablet) {
-      padding: 8px $spacing-small; // Reduce padding on smaller screens
-      font-size: 13px; // Smaller font size for tablet
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      font-size: 12px; // Even smaller font size for mobile
-    }
   }
 }
 
 .logo-bottom {
   text-align: center;
   margin: $spacing-xlarge 0;
-  letter-spacing: 2.5px;
-  @media (max-width: $breakpoint-mobile) {
-    margin: $spacing-large 0;
-  }
 
-  .logo-link {
+  a {
     @include font-pt-serif(700, 25px, 32px);
+    width: 126px;
+    letter-spacing: 2.5px;
     @include text-link;
     text-transform: uppercase;
-
-    @media (max-width: $breakpoint-tablet) {
-      font-size: 20px; // Smaller font size for tablet
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      font-size: 18px; // Even smaller font size for mobile
-    }
   }
 
   .rectangle-bottom {
-    width: 127px;
+    width: 125px;
     height: 6px;
     margin-top: -$spacing-small;
     opacity: 0.35;
@@ -65,13 +40,5 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: $zindex-default;
-
-    @media (max-width: $breakpoint-tablet) {
-      width: 110px; // Smaller rectangle for tablet
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      width: 100px; // Even smaller rectangle for mobile
-    }
   }
 }

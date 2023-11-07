@@ -4,57 +4,20 @@
 .bottom-social-wrapper {
   @include flex-center;
   margin-bottom: $spacing-large;
-
-  @media (max-width: $breakpoint-tablet) {
-    // Adjust the bottom margin for tablet devices
-    margin-bottom: $spacing-medium;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    // Adjust the bottom margin for mobile devices
-    margin-bottom: $spacing-small;
-  }
 }
 
 .bottom-social {
   @include flex-space-evenly;
-  width: 100%; // Use 100% width for flexibility
-  max-width: 304px; // Max width to maintain design on larger screens
-
-  @media (max-width: $breakpoint-tablet) {
-    // Reduce the size of the container for tablet devices
-    max-width: 250px;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    gap: $spacing-small; // Add a gap between items
-  }
+  width: 304px;
 }
 
-html .social-circle {
+.social-circle {
   width: 34px;
   height: 34px;
   border: 1px solid #e5e5e5;
   border-radius: 50%;
   background-repeat: no-repeat;
-  background-position: center;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: $color-secondary; // Change the background color on hover
-  }
-
-  @media (max-width: $breakpoint-tablet) {
-    // Slightly reduce the size of the icons for tablet devices
-    width: 30px;
-    height: 30px;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    // Further reduce the size of the icons for mobile devices
-    width: 26px;
-    height: 26px;
-  }
+  background-position: center top 50%;
 }
 
 .twitter-white {
@@ -63,7 +26,7 @@ html .social-circle {
   background-repeat: no-repeat;
 }
 
-html .gplus-circle {
+.gplus-circle {
   background: url("../../..//public/images/google.png") 7.22px no-repeat,
     url("../../..//public/images/plus.png") 21.15px no-repeat;
 }

@@ -14,21 +14,15 @@
     a {
       @include text-link;
     }
-
-    .instagram-image img {
-      max-width: 100%;
-      height: auto;
-      outline: none;
-
-      &:focus {
-        outline: none;
-      }
-    }
   }
-  @media (max-width: $breakpoint-tablet), (max-width: $breakpoint-mobile) {
-    // Adjust this value based on your tablet breakpoint
-    .react-multiple-carousel__arrow {
-      display: none;
+
+  .instagram-image img {
+    width: 296px;
+    height: 296px;
+    outline: none;
+
+    &:focus {
+      outline: none;
     }
   }
 }
