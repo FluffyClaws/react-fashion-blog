@@ -2,8 +2,19 @@
 @import "../../styles/mixins.scss";
 
 .categories {
+  width: inherit;
   @include flex-column-start;
   padding-top: $spacing-large;
+
+  // Adjust the categories for tablet devices
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: $spacing-medium;
+  }
+
+  // Adjust the categories for mobile devices
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: $spacing-small;
+  }
 
   a {
     width: 100%;
@@ -13,16 +24,48 @@
     justify-content: space-between;
     padding: $spacing-medium 0;
     border-bottom: 1px solid $border-color;
+
+    // Adjust the link padding for tablet devices
+    @media (max-width: $breakpoint-tablet) {
+      padding: $spacing-small 0;
+    }
+
+    // Adjust the link padding for mobile devices
+    @media (max-width: $breakpoint-mobile) {
+      padding: $spacing-small 0;
+    }
+
     &:hover {
       color: $color-secondary;
     }
+
     &:last-child {
       border: none;
       margin-bottom: $spacing-xlarge;
+
+      // Adjust the last link margin for tablet devices
+      @media (max-width: $breakpoint-tablet) {
+        margin-bottom: $spacing-medium;
+      }
+
+      // Adjust the last link margin for mobile devices
+      @media (max-width: $breakpoint-mobile) {
+        margin-bottom: $spacing-small;
+      }
     }
   }
 
   span {
     @include flex-row-center;
+
+    // Adjust the span for tablet devices
+    @media (max-width: $breakpoint-tablet) {
+      // You can add specific styles for tablet here if needed
+    }
+
+    // Adjust the span for mobile devices
+    @media (max-width: $breakpoint-mobile) {
+      // You can add specific styles for mobile here if needed
+    }
   }
 }

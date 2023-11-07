@@ -1,0 +1,13 @@
+@import "../styles/base";
+@import "../styles/variables";
+
+.main-container {
+  width: 95%;
+  margin: 0 auto;
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+}

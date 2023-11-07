@@ -4,6 +4,16 @@
 .author {
   margin-bottom: 70px;
 
+  // Adjust the author section for tablet devices
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: $spacing-large;
+  }
+
+  // Adjust the author section for mobile devices
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: $spacing-medium;
+  }
+
   .author-pic {
     background-image: url("../../..//public/images/auth-pic.png");
     background-position: center;
@@ -11,34 +21,86 @@
     height: 180px;
     width: 270px;
     margin-top: $spacing-medium;
+
+    // Adjust the author picture for tablet devices
+    @media (max-width: $breakpoint-tablet) {
+      height: 150px;
+      width: 100%;
+    }
+
+    // Adjust the author picture for mobile devices
+    @media (max-width: $breakpoint-mobile) {
+      height: 120px;
+      width: 100%;
+    }
   }
 
   .author-info {
     width: 270px;
-    height: 165px;
     background-color: $white;
+
+    // Adjust the author info for tablet devices
+    @media (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+
+    // Adjust the author info for mobile devices
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%;
+    }
+
+    .author-name,
+    .author-occup,
+    .author-bio {
+      text-align: center;
+    }
 
     .author-name {
       @include font-pt-serif(700, 16px, 21px);
-      text-align: center;
-      color: $color-primary;
       padding-top: $spacing-medium;
+
+      // Adjust the author name for tablet devices
+      @media (max-width: $breakpoint-tablet) {
+        @include font-pt-serif(700, 14px, 18px);
+      }
+
+      // Adjust the author name for mobile devices
+      @media (max-width: $breakpoint-mobile) {
+        @include font-pt-serif(700, 12px, 16px);
+      }
     }
 
     .author-occup {
       @include font-pt-serif(400, 14px, 19px);
       font-style: italic;
-      text-align: center;
       padding-top: $spacing-small;
       padding-bottom: $spacing-small;
-      color: $color-tertiary;
       border-bottom: 1px solid $border-color;
+
+      // Adjust the author occupation for tablet devices
+      @media (max-width: $breakpoint-tablet) {
+        @include font-pt-serif(400, 12px, 16px);
+      }
+
+      // Adjust the author occupation for mobile devices
+      @media (max-width: $breakpoint-mobile) {
+        @include font-pt-serif(400, 11px, 15px);
+      }
     }
 
     .author-bio {
       @include font-pt-sans;
-      text-align: center;
       padding: $spacing-medium $spacing-medium;
+
+      // Adjust the author bio for tablet devices
+      @media (max-width: $breakpoint-tablet) {
+        padding: $spacing-small $spacing-small;
+      }
+
+      // Adjust the author bio for mobile devices
+      @media (max-width: $breakpoint-mobile) {
+        padding: $spacing-small;
+      }
     }
   }
 
@@ -53,6 +115,16 @@
       text-transform: uppercase;
       color: $color-secondary;
       text-decoration: none;
+
+      // Adjust the more author link for tablet devices
+      @media (max-width: $breakpoint-tablet) {
+        @include font-pt-serif(400, 11px, 15px);
+      }
+
+      // Adjust the more author link for mobile devices
+      @media (max-width: $breakpoint-mobile) {
+        @include font-pt-serif(400, 10px, 14px);
+      }
     }
   }
 }

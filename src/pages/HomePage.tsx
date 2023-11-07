@@ -13,6 +13,7 @@ import { posts as postData, posts } from "../utils/postData";
 import usePagination from "../hooks/usePagination";
 import useCategoryFilter from "../hooks/useCategoryFilter";
 import PostList from "../components/PostList/PostList";
+import "./HomePage.scss";
 
 const HomePage: React.FC = () => {
   const postsPerPage = 10;
@@ -31,10 +32,10 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Header />
-      {/* <Banner />
-      <Container maxWidth="lg">
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={9}>
+      <Banner />
+      <Container className="main-container" maxWidth="lg">
+        <Grid container spacing={{ xs: 2, sm: 3, md: 4 }}>
+          <Grid item xs={12} sm={8} md={9}>
             <PostList posts={paginatedData} />
             <PageNavigation
               currentPage={currentPage}
@@ -42,7 +43,7 @@ const HomePage: React.FC = () => {
               onPageChange={setCurrentPage}
             />
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={4} md={3}>
             <LeftBar
               onCategoryChange={handleCategoryChange}
               posts={posts}
@@ -54,7 +55,7 @@ const HomePage: React.FC = () => {
       <InstagramSection />
       <BottomMenu />
       <BottomSocial />
-      <Footer /> */}
+      <Footer />
     </>
   );
 };

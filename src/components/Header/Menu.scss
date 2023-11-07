@@ -31,11 +31,12 @@
       background-color: $color-background-white;
       flex-direction: column;
       width: 100%;
-      transform: translateX(100%);
+      transform: translateX(100vw);
       align-items: center;
-      z-index: 2;
+      z-index: $zindex-overlay + 10;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       max-height: calc(100vh - #{80px});
+      overflow-y: auto;
     }
 
     &.open {

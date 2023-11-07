@@ -5,8 +5,21 @@
   width: 100%;
   height: 700px;
   background-image: url("../../../public/images/main_banner.png");
-  background-repeat: round;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
+
+  // Tablet styles
+  @media (max-width: $breakpoint-tablet) {
+    height: 500px;
+  }
+
+  // Mobile styles
+  @media (max-width: $breakpoint-mobile) {
+    height: 300px;
+  }
 
   &::before {
     content: "";
@@ -24,40 +37,99 @@
   }
 
   &-text {
-    width: 50%;
-    @include flex-column-start;
-    padding-top: 490px;
+    position: absolute;
+    top: 80%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    max-width: 1200px;
+    padding: 0 $spacing-large;
+    box-sizing: border-box;
     gap: $spacing-small;
     z-index: $zindex-overlay + 1;
-    position: relative;
 
-    p {
-      color: $white;
-      @include font-pt-serif(400, 14px, 18px);
+    // Tablet styles
+    @media (max-width: $breakpoint-tablet) {
+      left: 34%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      padding: 0 $spacing-medium;
     }
 
-    a {
+    // Mobile styles
+    @media (max-width: $breakpoint-mobile) {
+      top: 85%;
+      left: 50%;
+      width: 90%;
+      padding: 0 $spacing-small;
+    }
+
+    p,
+    a,
+    span {
       color: $white;
       text-decoration: none;
-      @include font-pt-serif(400, 14px, 18px);
+      transition: color 0.3s ease;
 
-      &:hover {
-        color: $color-secondary;
+      // Tablet styles
+      @media (max-width: $breakpoint-tablet) {
+        @include font-pt-serif(400, 13px, 17px);
+      }
+
+      // Mobile styles
+      @media (max-width: $breakpoint-mobile) {
+        @include font-pt-serif(400, 10px, 14px);
       }
     }
 
-    .cat {
-      @include font-pt-serif(400, 14px, 18px);
-      text-transform: uppercase;
+    a:hover {
+      color: $color-secondary;
+    }
+  }
+
+  .cat,
+  .headline,
+  span {
+    @include font-pt-serif(400, 14px, 18px);
+
+    // Tablet styles
+    @media (max-width: $breakpoint-tablet) {
+      @include font-pt-serif(400, 12px, 16px);
     }
 
-    .headline {
-      @include font-pt-serif(700, 40px, 50px);
+    // Mobile styles
+    @media (max-width: $breakpoint-mobile) {
+      @include font-pt-serif(400, 10px, 14px);
+    }
+  }
+
+  .headline {
+    @include font-pt-serif(700, 40px, 50px);
+
+    // Tablet styles
+    @media (max-width: $breakpoint-tablet) {
+      @include font-pt-serif(700, 35px, 45px);
     }
 
-    .bigB-wrapper {
-      @include flex-row-center;
-      gap: $spacing-medium;
+    // Mobile styles
+    @media (max-width: $breakpoint-mobile) {
+      @include font-pt-serif(700, 24px, 32px);
+    }
+  }
+
+  .bigB-wrapper {
+    @include flex-row-center;
+    gap: $spacing-medium;
+
+    // Tablet styles
+    @media (max-width: $breakpoint-tablet) {
+      gap: $spacing-small;
+    }
+
+    // Mobile styles
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: row;
+      gap: $spacing-small / 2;
     }
   }
 }
