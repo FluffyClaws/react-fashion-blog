@@ -3,8 +3,22 @@
 @import "../styles/base";
 
 html .content-container {
+  width: 95%;
+  margin: 0 auto;
   background-color: $color-background-white;
   padding: $spacing-large 0;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+
+    padding: $spacing-medium $spacing-medium;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+
+    padding: $spacing-small $spacing-medium;
+  }
 }
 
 html .content-page {
@@ -14,14 +28,42 @@ html .content-page {
   padding: $spacing-medium;
   background-color: $white;
   margin-bottom: $spacing-large;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: $spacing-large;
+    padding: $spacing-small;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: $spacing-medium;
+    padding: $spacing-small;
+  }
 }
 
 html .content-title {
   @include font-pt-serif(700, 24px, 32px);
   margin-bottom: $spacing-medium;
+
+  @media (max-width: $breakpoint-tablet) {
+    @include font-pt-serif(700, 20px, 28px);
+    margin-bottom: $spacing-small;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    @include font-pt-serif(700, 18px, 26px);
+    margin-bottom: $spacing-small;
+  }
 }
 
 html .content-description {
   @include font-pt-serif(400, 16px, 24px);
   color: $color-tertiary;
+
+  @media (max-width: $breakpoint-tablet) {
+    @include font-pt-serif(400, 14px, 22px);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    @include font-pt-serif(400, 12px, 20px);
+  }
 }

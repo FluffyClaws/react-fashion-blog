@@ -4,13 +4,20 @@
 html .comment-form {
   margin-top: $spacing-large;
   width: 100%;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: $spacing-medium;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: $spacing-small;
+  }
 }
 
 html .comment-input,
 html .comment-textarea {
   width: 100%;
   margin-bottom: $spacing-medium;
-  padding: $spacing-small;
   box-sizing: border-box;
 
   &::placeholder {
@@ -26,6 +33,20 @@ html .comment-textarea {
   & .MuiInputLabel-root.Mui-focused {
     color: $color-secondary;
   }
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: $spacing-small;
+    &::placeholder {
+      @include font-pt-serif(400, 13px, 17px);
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: $spacing-small;
+    &::placeholder {
+      @include font-pt-serif(400, 12px, 16px);
+    }
+  }
 }
 
 html .comment-submit-button {
@@ -39,5 +60,16 @@ html .comment-submit-button {
 
   &:hover {
     background-color: darken($color-secondary, 10%);
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $spacing-small $spacing-medium;
+    font-size: 13px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-small;
+    font-size: 12px;
+    width: auto;
   }
 }
