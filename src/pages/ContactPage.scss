@@ -4,7 +4,6 @@
 .contact-container {
   .contact-content {
     margin-top: 50px;
-
     @include flex-column-center;
     padding: $spacing-large 0;
 
@@ -47,11 +46,58 @@
   }
 }
 
-// Responsive adjustments
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-tablet) {
   .contact-container {
     .contact-content {
-      padding: $spacing-medium;
+      padding: $spacing-medium 0;
+      .contact-title {
+        @include font-pt-serif(700, 24px, 30px);
+        margin-bottom: $spacing-small;
+      }
+
+      .contact-description {
+        @include font-pt-sans($weight: 400, $size: 14px, $line-height: 20px);
+        margin-bottom: $spacing-small;
+      }
+
+      .contact-form {
+        .contact-input {
+          margin: $spacing-small 0;
+        }
+
+        .contact-submit {
+          padding: $spacing-small;
+          margin-top: $spacing-small;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .contact-container {
+    .contact-content {
+      padding: $spacing-small 0;
+      .contact-title {
+        @include font-pt-serif(700, 20px, 26px);
+        margin-bottom: $spacing-small;
+      }
+
+      .contact-description {
+        @include font-pt-sans($weight: 400, $size: 12px, $line-height: 18px);
+        margin-bottom: $spacing-small;
+      }
+
+      .contact-form {
+        .contact-input {
+          margin: $spacing-small 0;
+        }
+
+        .contact-submit {
+          padding: $spacing-small;
+          margin-top: $spacing-small;
+        }
+      }
     }
   }
 }

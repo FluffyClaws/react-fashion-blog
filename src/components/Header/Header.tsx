@@ -8,16 +8,17 @@ const Header: React.FC = () => {
   return (
     <Grid container className="header" alignItems="center">
       <Container className="header-container">
-        <Grid container className="row" spacing={3}>
-          <Grid item xs={6}>
+        <Grid container className="row" alignItems="center" spacing={3}>
+          <Grid item xs={6} sm={4} md={3} lg={3} style={{ order: 1 }}>
             <Logo />
           </Grid>
           <Grid
             item
             xs={6}
-            container
-            justifyContent="flex-end"
-            alignItems={"center"}
+            sm={8}
+            md={9}
+            lg={9}
+            style={{ order: 2, display: "flex", justifyContent: "flex-end" }}
           >
             <Menu />
           </Grid>

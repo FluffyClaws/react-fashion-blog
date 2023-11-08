@@ -7,6 +7,16 @@
   display: flex;
   flex-direction: column;
 
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+    margin-bottom: $spacing-medium;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+    margin-bottom: $spacing-small;
+  }
+
   a {
     @include font-pt-serif(400, 20px, 28px);
     color: $color-primary;
@@ -20,6 +30,14 @@
     background-color: $white;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: $spacing-medium;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: $spacing-small;
+    }
   }
 
   .post-cat {
@@ -43,6 +61,12 @@
     gap: $spacing-medium;
     margin-top: $spacing-small;
     align-items: center;
+
+    @media (max-width: $breakpoint-tablet), (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      gap: $spacing-small;
+      align-items: flex-start;
+    }
   }
 
   .recipe-main-addinfo-wrapper p {

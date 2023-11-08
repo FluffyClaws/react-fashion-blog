@@ -14,15 +14,23 @@
     a {
       @include text-link;
     }
-  }
 
-  .instagram-image img {
-    width: 296px;
-    height: 296px;
-    outline: none;
-
-    &:focus {
+    .instagram-image img {
+      max-width: 100%;
+      height: auto;
       outline: none;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
+  @media (max-width: $breakpoint-tablet), (max-width: $breakpoint-mobile) {
+    .react-multiple-carousel__arrow {
+      display: none;
+    }
+  }
+}
+.react-multi-carousel-item {
+  width: 100% !important;
 }
