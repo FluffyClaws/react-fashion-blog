@@ -22,7 +22,7 @@
 To get this project up and running on your local machine, follow these steps:
 
 ```bash
-git clone https://github.com/your-username/simple-blog.git
-cd simple-blog
+git clone https://github.com/FluffyClaws/react-fashion-blog.git
+cd react-fashion-blog
 npm install
 npm start
