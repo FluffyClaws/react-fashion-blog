@@ -8,7 +8,7 @@ const InstagramSection: React.FC = () => {
   const totalImages = 6;
   const images = Array.from({ length: totalImages }, (_, index) => {
     const imageNumber = (index % totalImages) + 1;
-    return `/images/photo${imageNumber}.png`;
+    return `react-fashion-blog//images/photo${imageNumber}.png`;
   });
 
   const responsive = {

@@ -3,7 +3,7 @@ import { Post } from "../types/types";
 export const posts: Post[] = [
   {
     id: 1,
-    imageUrl: "images/post-image1.png",
+    imageUrl: "react-fashion-blog/images/post-image1.png",
     category: "Tourism",
     title: "Exploring Ancient Rome",
     author: "Kate Willems",
@@ -13,7 +13,7 @@ export const posts: Post[] = [
   },
   {
     id: 2,
-    imageUrl: "images/post-image2.png",
+    imageUrl: "react-fashion-blog/images/post-image2.png",
     category: "Sport",
     title: "Marathon Training Tips",
     author: "Kate Willems",
@@ -23,7 +23,7 @@ export const posts: Post[] = [
   },
   {
     id: 3,
-    imageUrl: "images/post-image3.png",
+    imageUrl: "react-fashion-blog/images/post-image3.png",
     category: "Fashion",
     title: "Spring's Top Color Trends",
     author: "Kate Willems",
@@ -33,7 +33,7 @@ export const posts: Post[] = [
   },
   {
     id: 4,
-    imageUrl: "images/post-image4.png",
+    imageUrl: "react-fashion-blog/images/post-image4.png",
     category: "Fashion",
     title: "Eco-Friendly Fashion Brands",
     author: "Kate Willems",
@@ -43,7 +43,7 @@ export const posts: Post[] = [
   },
   {
     id: 5,
-    imageUrl: "images/post-image5.png",
+    imageUrl: "react-fashion-blog/images/post-image5.png",
     category: "Clothes",
     title: "The Best Denim for Your Shape",
     author: "Kate Willems",
@@ -53,7 +53,7 @@ export const posts: Post[] = [
   },
   {
     id: 6,
-    imageUrl: "images/post-image6.png",
+    imageUrl: "react-fashion-blog/images/post-image6.png",
     category: "Technology",
     title: "Smart Home Tech Revolution",
     author: "Kate Willems",
@@ -63,7 +63,7 @@ export const posts: Post[] = [
   },
   {
     id: 7,
-    imageUrl: "images/feat-post-main.png",
+    imageUrl: "react-fashion-blog/images/feat-post-main.png",
     category: "Health",
     title: "Mindfulness Meditation Benefits",
     author: "Kate Willems",
@@ -76,7 +76,7 @@ export const posts: Post[] = [
   },
   {
     id: 8,
-    imageUrl: "images/post-image2.png",
+    imageUrl: "react-fashion-blog/images/post-image2.png",
     category: "Travel",
     title: "Budget-Friendly European Destinations",
     author: "Kate Willems",
@@ -86,7 +86,7 @@ export const posts: Post[] = [
   },
   {
     id: 9,
-    imageUrl: "images/post-image4.png",
+    imageUrl: "react-fashion-blog/images/post-image4.png",
     category: "Food",
     title: "The Rise of Plant-Based Diets",
     author: "Kate Willems",
@@ -96,7 +96,7 @@ export const posts: Post[] = [
   },
   {
     id: 10,
-    imageUrl: "images/post-image1.png",
+    imageUrl: "react-fashion-blog/images/post-image1.png",
     category: "Lifestyle",
     title: "The Art of Digital Detox",
     author: "Kate Willems",
@@ -106,7 +106,7 @@ export const posts: Post[] = [
   },
   {
     id: 11,
-    imageUrl: "images/post-image3.png",
+    imageUrl: "react-fashion-blog/images/post-image3.png",
     category: "Fashion",
     title: "Sustainable Fashion on a Budget",
     author: "Kate Willems",
@@ -116,7 +116,7 @@ export const posts: Post[] = [
   },
   {
     id: 12,
-    imageUrl: "images/post-image6.png",
+    imageUrl: "react-fashion-blog/images/post-image6.png",
     category: "Business",
     title: "Entrepreneurship in the Digital Age",
     author: "Kate Willems",
@@ -126,7 +126,7 @@ export const posts: Post[] = [
   },
   {
     id: 13,
-    imageUrl: "images/post-image5.png",
+    imageUrl: "react-fashion-blog/images/post-image5.png",
     category: "Environment",
     title: "The Future of Renewable Energy",
     author: "Kate Willems",
@@ -136,7 +136,7 @@ export const posts: Post[] = [
   },
   {
     id: 14,
-    imageUrl: "images/post-image1.png",
+    imageUrl: "react-fashion-blog/images/post-image1.png",
     category: "Education",
     title: "The Shift to E-Learning",
     author: "Kate Willems",
@@ -146,7 +146,7 @@ export const posts: Post[] = [
   },
   {
     id: 15,
-    imageUrl: "images/post-image4.png",
+    imageUrl: "react-fashion-blog/images/post-image4.png",
     category: "Entertainment",
     title: "The Evolution of Streaming Services",
     author: "Kate Willems",
@@ -156,7 +156,7 @@ export const posts: Post[] = [
   },
   {
     id: 16,
-    imageUrl: "images/post-image6.png",
+    imageUrl: "react-fashion-blog/images/post-image6.png",
     category: "Technology",
     title: "The Rise of Artificial Intelligence",
     author: "Kate Willems",
@@ -166,7 +166,7 @@ export const posts: Post[] = [
   },
   {
     id: 17,
-    imageUrl: "images/post-image3.png",
+    imageUrl: "react-fashion-blog/images/post-image3.png",
     category: "Health",
     title: "Mental Health in the Workplace",
     author: "Kate Willems",
@@ -176,7 +176,7 @@ export const posts: Post[] = [
   },
   {
     id: 18,
-    imageUrl: "images/post-image1.png",
+    imageUrl: "react-fashion-blog/images/post-image1.png",
     category: "Culture",
     title: "The Impact of Social Media on Society",
     author: "Kate Willems",
@@ -186,7 +186,7 @@ export const posts: Post[] = [
   },
   {
     id: 19,
-    imageUrl: "images/post-image6.png",
+    imageUrl: "react-fashion-blog/images/post-image6.png",
     category: "Science",
     title: "The Frontiers of Space Exploration",
     author: "Kate Willems",
@@ -196,7 +196,7 @@ export const posts: Post[] = [
   },
   {
     id: 20,
-    imageUrl: "images/post-image5.png",
+    imageUrl: "react-fashion-blog/images/post-image5.png",
     category: "Lifestyle",
     title: "The Urban Gardening Revolution",
     author: "Kate Willems",
@@ -206,7 +206,7 @@ export const posts: Post[] = [
   },
   {
     id: 21,
-    imageUrl: "images/post-image2.png",
+    imageUrl: "react-fashion-blog/images/post-image2.png",
     category: "Education",
     title: "Rethinking Education for the Digital Age",
     author: "Kate Willems",
@@ -216,7 +216,7 @@ export const posts: Post[] = [
   },
   {
     id: 22,
-    imageUrl: "images/post-image1.png",
+    imageUrl: "react-fashion-blog/images/post-image1.png",
     category: "Environment",
     title: "Battling Climate Change with Innovative Solutions",
     author: "Kate Willems",
@@ -226,7 +226,7 @@ export const posts: Post[] = [
   },
   {
     id: 23,
-    imageUrl: "images/post-image4.png",
+    imageUrl: "react-fashion-blog/images/post-image4.png",
     category: "Economy",
     title: "Understanding the Gig Economy",
     author: "Kate Willems",
@@ -236,7 +236,7 @@ export const posts: Post[] = [
   },
   {
     id: 24,
-    imageUrl: "images/post-image5.png",
+    imageUrl: "react-fashion-blog/images/post-image5.png",
     category: "Entertainment",
     title: "The Evolution of Streaming Services",
     author: "Kate Willems",
@@ -246,7 +246,7 @@ export const posts: Post[] = [
   },
   {
     id: 25,
-    imageUrl: "images/post-image6.png",
+    imageUrl: "react-fashion-blog/images/post-image6.png",
     category: "Travel",
     title: "The Future of Sustainable Travel",
     author: "Kate Willems",
@@ -256,7 +256,7 @@ export const posts: Post[] = [
   },
   {
     id: 26,
-    imageUrl: "/images/main_banner.png",
+    imageUrl: "react-fashion-blog/images/main_banner.png",
     category: "Vehicle",
     title: "One of Saturn’s largest rings may be newer than anyone",
     author: "Kate Willems",
