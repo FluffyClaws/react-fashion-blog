@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import RecipesPage from "./pages/RecipesPage";
 import ArticlePage from "./pages/ArticlePage";
@@ -9,7 +9,7 @@ import ContentPage from "./pages/ContentPage";
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter basename="/">
+    <HashRouter basename="/">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/recipes" element={<RecipesPage />} />
@@ -17,7 +17,7 @@ const App: React.FC = () => {
         <Route path="/content/:type/:id" element={<ContentPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
