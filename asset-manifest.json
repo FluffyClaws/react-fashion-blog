@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-fashion-blog/static/css/main.a42578f2.css",
-    "main.js": "/react-fashion-blog/static/js/main.dd6781b5.js",
+    "main.js": "/react-fashion-blog/static/js/main.49f6f11a.js",
     "static/media/main_banner.png": "/react-fashion-blog/static/media/main_banner.f9f8706efef1d78f7879.png",
     "static/media/auth-pic.png": "/react-fashion-blog/static/media/auth-pic.90d58a90cd8923f2ac19.png",
     "static/media/revicons.eot": "/react-fashion-blog/static/media/revicons.a77de540a38981833f9e.eot",
@@ -9,10 +9,10 @@
     "static/media/revicons.woff": "/react-fashion-blog/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/react-fashion-blog/index.html",
     "main.a42578f2.css.map": "/react-fashion-blog/static/css/main.a42578f2.css.map",
-    "main.dd6781b5.js.map": "/react-fashion-blog/static/js/main.dd6781b5.js.map"
+    "main.49f6f11a.js.map": "/react-fashion-blog/static/js/main.49f6f11a.js.map"
   },
   "entrypoints": [
     "static/css/main.a42578f2.css",
-    "static/js/main.dd6781b5.js"
+    "static/js/main.49f6f11a.js"
   ]
 }
